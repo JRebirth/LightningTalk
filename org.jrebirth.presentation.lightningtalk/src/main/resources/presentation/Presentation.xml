@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<presentation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.jrebirth.org/Presentation" xsi:schemaLocation="http://www.jrebirth.org/Presentation Presentation.xsd">
+
+	<title>JavaFX 2.2 What's Up ?</title>
+	<date>15/11/2012</date>
+	<event>ToulouseJug 11/2012</event>
+	<place>Toulouse</place>
+
+	<speakers>
+		<speaker firstName="Sébastien" lastName="Bordes" email="contact@jrebirth.org" job="JRebirth" />
+	</speakers>
+
+	<slides>
+
+		<!-- Conference Place -->
+		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
+		</slide>
+		
+		<!-- Presentation Title -->
+<!-- 		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
+			<title>La Revolution\n\tJavaFX 2</title>
+		</slide>
+ -->
+ 
+ 
+ 
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Cross-Platform</title>
+			<content>
+				<item>JavaFX 2.2 is available on :</item>
+				<item>Windows (32-bit &amp; 64-bit)</item>
+				<item>Mac OS X (64-bit)</item>
+				<item>Linux (32-bit &amp; 64-bit)</item>
+				<item>OpenJFX in OpenJDK</item>
+				<item>Since Java SE 7u6</item>
+				<item>Unified installer &amp; installation</item>
+				<item>jfxrt.jar</item>
+			</content>
+		</slide>
+ 
+ 
+ 
+ <!-- 
+ 
+ Earlier this week, Oracle released JavaFX 2.2, which is a significant update release:
+
+    With version 2.2, JavaFX is finally available on Windows (32-bit &amp; 64-bit), Mac OS X (64-bit), and Linux (32-bit &amp; 64-bit), which means that most developers
+     can build and test JavaFX applications on their preferred development environment. Have a look at the JavaFX Certified System Configurations for more details.
+
+    The JavaFX 2.2 Runtime is now part of Oracle’s Java SE 7u6 implementation. While we already had some form of integration between these two products 
+    since December 2011, , we now have one unified installer, with the JavaFX libraries installed alongside the Java SE libraries for both the JDK and 
+    the JRE. This means a more streamlined user experience, and the assurance for application developers that the number of computers capable of running 
+    JavaFX applications will soon be as large as for Java SE applications.
+
+    A stand-alone implementation of JavaFX 2 will remain available for Java SE 6 users, but only on Windows. Additionally, that stand-alone version will 
+    no longer be supported when Java SE 6 reaches End of Life (EOL) in February 2013. As explained previously, this means there will no longer be bug 
+    fixes or security fixes available for Java SE 6 users after that date, unless you or your customers sign up for our commercial Java SE Support offering. 
+    Otherwise, plan your migration to Java SE 7 right now.
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Packaging</title>
+			<content>
+				<item>Native packaging</item>
+				<item>Self-installable package</item>
+				<item>Including Java &amp; JavaFX Runtimes</item>
+			</content>
+		</slide>
+ 
+<!-- 
+Besides these important changes, JavaFX 2.2 brings in some key new features:
+
+    JavaFX applications can now be redistributed as self-contained application packages. These platform-specific packages include all application 
+    resources and a private copy of Java and JavaFX Runtimes. Distributed as a native installable package, they provide the same installation 
+    and launch experience as native applications for that operating system. A key benefit to take into consideration is that it will allow 
+    you to deploy JavaFX 2.2 applications bundled with Java SE 7 without impacting existing deployments of older Java SE implementations.
+
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Multi-Touch</title>
+			<content>
+				<item>Rotate</item>
+				<item level="1">ROTATION_STARTED, ROTATE, ROTATION_FINISHED</item>
+				<item>Scroll</item>
+				<item level="1">SCROLL_STARTED, SCROLL, SCROLL_FINISHED</item>
+				<item>Swipe</item>
+				<item level="1">SWIPE_LEFT, SWIPE_RIGHT, SWIPE_UP, SWIPE_DOWN</item>
+				<item>Zoom</item>
+				<item level="1">ZOOM_STARTED, ZOOM, ZOOM_FINISHED</item>
+			</content>
+		</slide>
+ 
+<!-- 
+    Multi-touch support for touch-enabled devices. As of today this is mostly relevant for desktop-class touch screen displays and touch pads, 
+    this will enable the adoption of sophisticated UIs on embedded devices running Java SE Embedded on ARM-based chipsets, such as kiosks, 
+    telemetry systems, healthcare devices, multi-function printers, monitoring systems, etc. This is a segment of the Java application 
+    market that is usually overseen by most application developers, but that is thriving.
+
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Canvas</title>
+			<content>
+				<item>GraphicsContext</item>
+				<item>draw &amp; fill methods</item>
+				<item>save &amp; restore methods</item>
+				<item>Effects &amp; Transform</item>
+				
+			</content>
+		</slide>
+		
+		 <slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
+			<title>Canvas</title>
+		</slide>
+ 
+<!-- 
+    The JavaFX Canvas API, a Canvas 2D drawing surface that provides HTML5 Canvas-style operations. Developers familiar with HTML5 will definitely 
+    be at ease with the JavaFX Canvas API, although it is important to notice that this is not meant to be a duplicate of the HTML5 Canvas Graphics API.
+     We believe this API will also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” 
+     canvas demo under the section “NEW!” of the Ensemble sample application, or you can watch the making of another Canvas example on this video.
+
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Image manipulation</title>
+			<content>
+				<item>Read &amp; Write pixels</item>
+			</content>
+		</slide>
+ 
+<!-- 
+    JavaFX 2.2 introduces the ability to read and write pixels to and from JavaFX image objects. An example is available as “Image Operator” in
+     the “NEW!” section of Ensemble.
+
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>New controls</title>
+			<content>
+				<item>Native packaging</item>
+			</content>
+		</slide>
+ 
+<!-- 
+    Two new UI controls have been added to JavaFX 2.2: a color picker, and a pagination control; you can give them a try in the “NEW!” section of
+     Ensemble. In addition, the WebView control now provides the ability to manage web history. Finally, we have documented how to create a 
+     custom control with FXML, which takes advantage of FXML enhancements.
+
+
+    HTTP Live Streaming support is a feature that strengthens up JavaFX’s media support. Essentially, media players are now able to switch to 
+    alternate video and audio streams, as specified in a downloadable playlist file and based on network conditions.
+
+-->
+
+ 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Integration</title>
+			<content>
+				<item>Swing integration documentation</item>
+				<item>SWT integration documentation</item>
+				<item></item>
+				<item>New stable SceneBuilder 1.0</item>
+			</content>
+		</slide>
+ 
+<!-- 
+    Additional information to help Swing developers implement a Swing application in JavaFX, and SWT developers to integrate JavaFX content in 
+    SWT applications. We also have documented some Best Practices for developing a JavaFX application.
+
+    Last but not the least, JavaFX developers can now leverage the new JavaFX Scene Builder 1.0 to visually layout an application UI, and generate 
+    FXML content that helps keep a clean separation between application logic and UI. Scene Builder is also a great example of a complex 
+    application written in JavaFX. It is currently available on Windows and Mac OS X, and is optimized to work seamlessly with NetBeans 7.2 
+    or higher (it can also be used with other Java IDEs).
+
+
+In summary, JavaFX 2.2 is a key release that brings much more than Linux support. It fulfills Oracle’s vision to integrate JavaFX with Java SE 
+to a large extent, and is a proof of our commitment for cross-platform support and predictable timelines. 
+ 
+ 
+ 
+  -->
+ 
+ 
+ 
+	</slides>
+
+</presentation>
