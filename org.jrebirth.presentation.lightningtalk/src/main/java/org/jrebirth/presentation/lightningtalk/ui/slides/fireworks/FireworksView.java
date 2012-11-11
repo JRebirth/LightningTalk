@@ -53,6 +53,14 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      * {@inheritDoc}
      */
     @Override
+    public void doHide() {
+        this.pane.stop();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void doReload() {
         this.pane.stop();
         this.pane.start();

@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) 2008, 2012 Oracle and/or its affiliates.
+ * All rights reserved. Use is subject to license terms.
+ */
+
 package org.jrebirth.presentation.lightningtalk.ui.slides.fireworks;
 
 import java.util.ArrayList;
