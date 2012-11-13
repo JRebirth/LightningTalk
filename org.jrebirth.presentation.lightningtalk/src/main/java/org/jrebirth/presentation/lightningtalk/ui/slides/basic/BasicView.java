@@ -50,8 +50,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.RectangleBuilder;
 import javafx.scene.shape.SVGPath;
 import javafx.scene.shape.SVGPathBuilder;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextBuilder;
@@ -62,6 +60,7 @@ import javafx.util.Duration;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.PrezColors;
 import org.jrebirth.presentation.PrezFonts;
+import org.jrebirth.presentation.lightningtalk.LtFonts;
 import org.jrebirth.presentation.model.SlideContent;
 import org.jrebirth.presentation.model.SlideItem;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
@@ -113,6 +112,8 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     private Label primaryTitle;
 
     private Label prezTitle;
+
+    private ImageView placeLogo;
 
     /**
      * Default Constructor.
@@ -227,7 +228,10 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
      */
     @Override
     public void doHide() {
-        this.primaryTitle.setLayoutX(-3000);
+
+        this.primaryTitle.setTranslateX(3000);
+        this.placeLogo.setTranslateX(1200);
+
         this.smallPokemon.setScaleX(0);
         this.smallPokemon.setScaleY(0);
         this.bigPokemon.setScaleX(0);
@@ -322,12 +326,18 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
                                 )
                         )
                         .build(),
+                TranslateTransitionBuilder.create()
+                        .node(this.placeLogo)
+                        .delay(Duration.millis(1200))
+                        .duration(Duration.millis(300))
+                        .toX(-400)
+                        .build(),
 
                 TranslateTransitionBuilder.create()
                         .node(this.primaryTitle)
                         .delay(Duration.millis(200))
                         .duration(Duration.millis(400))
-                        .toX(130)
+                        .toX(-3000 + 130)
                         .build(),
                 TimelineBuilder.create()
                         .keyFrames(
@@ -385,12 +395,13 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
                 .minWidth(1024)
                 .prefWidth(1024)
                 .build();
+
         this.primaryTitle = LabelBuilder.create()
                 // .styleClass("slideTitle")
-                .font(PrezFonts.SLIDE_TITLE.get())
+                .font(LtFonts.SLIDE_TITLE.get())
                 .textFill(PrezColors.SLIDE_TITLE.get())
                 .text(getModel().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
-                .layoutX(0) // 40
+                .layoutX(3000) // 40
                 .layoutY(45)
                 // .style("-fx-background-color:#CCCB20")
                 .build();
@@ -411,29 +422,33 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
 
         this.prezTitle = LabelBuilder.create()
                 // .styleClass("slideTitle")
-                .font(Font.font("OliJo", FontPosture.ITALIC, 20) /* PrezFonts.PREZ_TITLE.get() */)
-                .textFill(PrezColors.SLIDE_TITLE.get())
+                .font(LtFonts.PREZ_TITLE.get())
+                .textFill(Color.LIGHTGRAY)
                 // .scaleX(1.5)
                 // .scaleY(1.5)
-                .layoutX(545)
-                .layoutY(711)
+                // .layoutX(545)
+                // .layoutY(711)
+                .layoutX(480)
+                .layoutY(14.0)
                 .minWidth(450)
                 // .style("-fx-background-color:#E53B20")
                 .alignment(Pos.CENTER_RIGHT)
                 .textAlignment(TextAlignment.RIGHT)
                 .build();
 
-        final ImageView placeLogo = ImageViewBuilder.create()
-                .layoutX(680.0)
-                .layoutY(-14.0)
-                .scaleX(0.6)
-                .scaleY(0.6)
-                .image(loadImage("images/HeaderLogo.png"))
+        this.placeLogo = ImageViewBuilder.create()
+                // .layoutX(680.0)
+                // .layoutY(-14.0)
+                .layoutX(1200)
+                .layoutY(700)
+                // .scaleX(0.6)
+                // .scaleY(0.6)
+                .image(loadImage("images/PlaceLogo.png"))
                 .build();
 
         final Polyline pl = PolylineBuilder.create()
                 .strokeWidth(3)
-                .stroke(Color.BLACK)
+                .stroke(Color.web("F79508"))
                 .points(684.0, 12.0, 946.0, 12.0, 946.0, 107.0)
                 .build();
 
@@ -521,7 +536,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
 
         headerPane.getChildren().addAll(this.topRectangle, this.bottomRectangle,
                 this.bigPokemon, this.smallPokemon,
-                this.primaryTitle, placeLogo, this.secondaryTitle,
+                this.primaryTitle, this.placeLogo, this.secondaryTitle,
                 pl, this.pageLabel,
                 this.prezTitle);
 
@@ -618,7 +633,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
             this.secondaryTitle.setText(slideContent.getTitle());
         }
 
-        this.prezTitle.setText("JavaFX 2.2 What's Up ?");
+        this.prezTitle.setText("JavaFX 2.2\n What's Up ?");
 
         final VBox vbox = new VBox();
         // vbox.getStyleClass().add("content");

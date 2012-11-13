@@ -7,7 +7,6 @@ import org.jrebirth.core.resource.font.FontBuilder;
 import org.jrebirth.core.resource.font.FontEnum;
 import org.jrebirth.core.resource.font.FontParams;
 import org.jrebirth.core.resource.font.RealFont;
-import org.jrebirth.presentation.FontsLoader;
 
 /**
  * The class <strong>LtFonts</strong>.
@@ -21,9 +20,14 @@ public enum LtFonts implements FontEnum {
     PAGE(new RealFont(LtFontsLoader.DINk, 24)),
 
     /** The typewriter font. */
-    TYPEWRITER(new RealFont(FontsLoader.Report_1942, 72)),
+    TYPEWRITER(new RealFont(LtFontsLoader.MIZIKE, 72)),
 
-    SLIDE_ITEM(new RealFont(LtFontsLoader.Neuton_Cursive, 10));
+    /** The slide title font. */
+    SLIDE_TITLE(new RealFont(LtFontsLoader.Harabara, 45)),
+
+    SLIDE_ITEM(new RealFont(LtFontsLoader.Neuton_Cursive, 10)),
+
+    PREZ_TITLE(new RealFont(LtFontsLoader.Harabara, 26));
 
     /**
      * Default Constructor.

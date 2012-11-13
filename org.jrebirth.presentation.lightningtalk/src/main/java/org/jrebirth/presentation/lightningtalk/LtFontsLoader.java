@@ -15,6 +15,12 @@ public enum LtFontsLoader implements FontName {
     /** . */
     Report_1942,
 
+    Essays1743,
+
+    Harabara,
+
+    MIZIKE,
+
     /** . */
     Neuton_Cursive;
 

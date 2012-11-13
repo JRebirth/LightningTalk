@@ -13,32 +13,12 @@
 	<slides defaultModelClass="org.jrebirth.presentation.lightningtalk.ui.slides.basic.BasicModel">
 
 
-<!-- 		<slide style="me" showAnimation="MoveFromRight" hideAnimation="FadeOut">
-			<title>Sébastien Bordes</title>
-			<content>
-				<item>Développeur</item>
-				<item level="1"></item>
-				<item>Technologies</item>
-				<item level="1">Swing, JEE, Eclipse RCP, Flash-Flex (AS3), Silverlight (C#)</item>
-				<item></item>
-				<item>@s8bordes</item>
-				<item level="1">seb@jrebirth.org</item>
-				<item link="true">www.jrebirth.org</item>
-				<item link="true">blog.webeo.fr</item>
-				<item></item>
-				<item>Artwork by</item>
-				<item level="1">xoxi@xoxi.fr</item>
-			</content>
-		</slide> -->
-
-
-		<!-- Conference Place -->
 		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 		</slide>
 		
 		<!-- Presentation Title -->
  		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
-			<title>JavaFX 2.2\n  What's Up ?</title>
+			<title>   JavaFX 2.2\n\t What's Up ?</title>
 		</slide>
 
 		<!-- MOI -->

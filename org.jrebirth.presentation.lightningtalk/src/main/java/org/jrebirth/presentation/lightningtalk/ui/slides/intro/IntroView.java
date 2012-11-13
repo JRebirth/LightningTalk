@@ -8,6 +8,9 @@ import javafx.animation.Timeline;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.LabelBuilder;
+import javafx.scene.effect.DropShadowBuilder;
+import javafx.scene.effect.GlowBuilder;
+import javafx.scene.effect.InnerShadowBuilder;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -58,6 +61,20 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
                 .alignment(Pos.CENTER_LEFT)
                 .minWidth(800)
                 .minHeight(500)
+                .effect(DropShadowBuilder.create()
+                        .input(
+                                GlowBuilder.create()
+                                        .input(InnerShadowBuilder.create()
+                                                .offsetX(-1)
+                                                .offsetY(-1)
+                                                .color(Color.LIGHTSKYBLUE)
+                                                .build())
+                                        .level(0.5)
+                                        .build()
+                        )
+                        .offsetX(2)
+                        .offsetY(2)
+                        .build())
                 .build();
 
         this.label.getStyleClass().add("introTitle");
