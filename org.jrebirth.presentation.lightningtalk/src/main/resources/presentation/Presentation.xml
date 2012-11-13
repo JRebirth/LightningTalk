@@ -10,27 +10,78 @@
 		<speaker firstName="Sébastien" lastName="Bordes" email="contact@jrebirth.org" job="JRebirth" />
 	</speakers>
 
-	<slides>
+	<slides defaultModelClass="org.jrebirth.presentation.lightningtalk.ui.slides.basic.BasicModel">
+
+
+<!-- 		<slide style="me" showAnimation="MoveFromRight" hideAnimation="FadeOut">
+			<title>Sébastien Bordes</title>
+			<content>
+				<item>Développeur</item>
+				<item level="1"></item>
+				<item>Technologies</item>
+				<item level="1">Swing, JEE, Eclipse RCP, Flash-Flex (AS3), Silverlight (C#)</item>
+				<item></item>
+				<item>@s8bordes</item>
+				<item level="1">seb@jrebirth.org</item>
+				<item link="true">www.jrebirth.org</item>
+				<item link="true">blog.webeo.fr</item>
+				<item></item>
+				<item>Artwork by</item>
+				<item level="1">xoxi@xoxi.fr</item>
+			</content>
+		</slide> -->
+
 
 		<!-- Conference Place -->
-		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
+		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 		</slide>
 		
 		<!-- Presentation Title -->
-<!-- 		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
-			<title>La Revolution\n\tJavaFX 2</title>
+ 		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
+			<title>JavaFX 2.2\n  What's Up ?</title>
 		</slide>
- -->
+
+		<!-- MOI -->
+		<slide style="me" showAnimation="MoveFromRight" hideAnimation="FadeOut">
+			<title>Sébastien Bordes</title>
+			<content>
+				<item>Développeur</item>
+				<item level="1"></item>
+				<item>Technologies</item>
+				<item level="1">Swing, JEE, Eclipse RCP, Flash-Flex (AS3), Silverlight (C#)</item>
+				<item></item>
+				<item>@s8bordes</item>
+				<item level="1">seb@jrebirth.org</item>
+				<item link="true">www.jrebirth.org</item>
+				<item link="true">blog.webeo.fr</item>
+				<item></item>
+				<item>Artwork by</item>
+				<item level="1">xoxi@xoxi.fr</item>
+			</content>
+		</slide>
  
- 
+ 		<!-- Episode précédent -->
+		<slide showAnimation="MoveFromRight" hideAnimation="FadeOut">
+			<title>Previously On ...</title>
+			<content>
+				<item>ToulouseJUG</item>
+				<item level="1" link="true">www.jrebirth.org/toulousejug.html</item>
+				<item>EclipseDay</item>
+				<item level="1" link="true">www.jrebirth.org/eclipseday.html</item>
+				<item>Breizhcamp</item>
+				<item level="1" link="true">www.jrebirth.org/breizhcamp.html</item>
+				<item>ToulouseJUG Lightning Talk</item>
+				<item level="1" link="true">www.jrebirth.org/lightningtalk.html</item>
+			</content>
+		</slide>
  
  		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
 			<title>Cross-Platform</title>
 			<content>
 				<item>JavaFX 2.2 is available on :</item>
-				<item>Windows (32-bit &amp; 64-bit)</item>
-				<item>Mac OS X (64-bit)</item>
-				<item>Linux (32-bit &amp; 64-bit)</item>
+				<item level="1">Windows (32-bit &amp; 64-bit)</item>
+				<item level="1">Mac OS X (64-bit)</item>
+				<item level="1">Linux (32-bit &amp; 64-bit)</item>
 				<item>OpenJFX in OpenJDK</item>
 				<item>Since Java SE 7u6</item>
 				<item>Unified installer &amp; installation</item>
@@ -103,8 +154,8 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 			<title>Canvas</title>
 			<content>
 				<item>GraphicsContext</item>
-				<item>draw &amp; fill methods</item>
-				<item>save &amp; restore methods</item>
+				<item>Draw &amp; Fill methods</item>
+				<item>Save &amp; Restore methods</item>
 				<item>Effects &amp; Transform</item>
 				
 			</content>
@@ -179,7 +230,20 @@ to a large extent, and is a proof of our commitment for cross-platform support a
  
  
   -->
- 
+ 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" hideAnimation="MoveToRight" showAnimation="FadeIn">
+			<content>
+				<item image="images/splash/Merci.png" />
+			</content>
+		</slide>
+
+		<!-- Des Questions -->
+		<!-- <slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel"> <title>Avez-vous des\nquestions ?</title> </slide> -->
+
+		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="MoveFromLeft">
+			<content>
+				<item image="images/splash/Q_and_R.png" />
+			</content>
+		</slide>
  
  
 	</slides>

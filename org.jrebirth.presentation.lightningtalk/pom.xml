@@ -78,7 +78,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.3.2</version>
 
 				<!-- <executions> <execution> <goals> <goal>sign</goal> </goals> </execution> </executions> -->
 
@@ -95,7 +95,7 @@
 							<JavaFX-Application-Class>org.jrebirth.presentation.lightningtalk.LightningTalk</JavaFX-Application-Class>
 							<JavaFX-Class-Path>presentation-0.4.0-SNAPSHOT.jar
 								jaxb-api-2.2.1.jar stax-api-1.0-2.jar activation-1.1.jar
-								jaxb-impl-2.2.1.jar core-0.4.0-SNAPSHOT.jar</JavaFX-Class-Path>
+								jaxb-impl-2.2.1.jar core-0.7.0-SNAPSHOT.jar</JavaFX-Class-Path>
 							<!-- implementation-vendor: I implementation-title: Jrebirth demo implementation-version: 1.0 JavaFX-Application-Class: org.jrebirth.demo.JRebirthDemo Created-By: 
 								Maven Packager Main-Class: com/javafx/main/Main -->
 						</manifestEntries>
@@ -140,7 +140,7 @@
 					<excludeTransitive>false</excludeTransitive>
 
 					<!-- The path where the libraries are stored within the jnlp structure. not required. by default the libraries are within the working directory -->
-					<!-- <libPath>lib</libPath> -->
+					<!-- >libPath>lib</libPath -->
 
 					<!-- [optional] transitive dependencies filter - if omitted, all transitive dependencies are included -->
 					<!-- <dependencies> Note that only groupId and artifactId must be specified here. because of a limitation of the Include/ExcludesArtifactFilter <includes> <include>org.jrebirth:presentation</include> 
@@ -152,7 +152,7 @@
 					<jnlp>
 						<!-- default values -->
 						<!--inputTemplateResourcePath>${project.basedir}</inputTemplateResourcePath -->
-						<!--inputTemplate>src/main/jnlp/template.vm</inputTemplate --> <!-- relative to inputTemplateResourcePath -->
+						<!-- inputTemplate>src/main/jnlp/template.vm</inputTemplate --> <!-- relative to inputTemplateResourcePath -->
 						<outputFile>LightningTalk.jnlp</outputFile> <!-- defaults to launch.jnlp -->
 
 						<!-- used to automatically identify the jar containing the main class. -->

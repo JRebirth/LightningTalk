@@ -7,22 +7,18 @@
 
 #SlideStack{
 	
-	-fx-background-image : url("../images/background.png");
+	-fx-background-image : url("../images/background.jpg");
 	-fx-background-color: transparent;
     -fx-background-position: center center;
     -fx-background-size : stretch;
     
     -fx-fill : #A0DCFF ;
 }
-/*
+
 .intro .introTitle {
-	-fx-font : 90px "1942 Report";
+	-fx-font : 100px "1942 Report";
 	-fx-fill: #CCCCCC;
 }
-.introbis .introTitle {
-	-fx-font : 80px "OliJo";
-	-fx-fill: #CCCCCC;
-}*/
 
 .header{
 	

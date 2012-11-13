@@ -98,9 +98,9 @@ public class FireworksPane extends Pane {
         // final double h = 360.0;
         final double w = getWidth();
         final double h = getHeight();
-        final double scale = Math.min(w / 1024d, h / 708d);
+        final double scale = 1;// Math.min(w / 1024d, h / 708d);
         final int width = (int) (1024 * scale);
-        final int height = (int) (708 * scale);
+        final int height = (int) (768 * scale);
         final int x = (int) ((w - width) / 2);
         final int y = (int) ((h - height) / 2);
         this.background.relocate(x, y);

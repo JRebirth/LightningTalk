@@ -13,6 +13,9 @@ public enum LtFontsLoader implements FontName {
     DINk,
 
     /** . */
+    Report_1942,
+
+    /** . */
     Neuton_Cursive;
 
     /**

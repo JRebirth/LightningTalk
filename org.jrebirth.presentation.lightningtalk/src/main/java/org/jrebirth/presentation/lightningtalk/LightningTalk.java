@@ -101,7 +101,8 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
     @Override
     protected List<FontEnum> getFontToPreload() {
         return Arrays.asList(new FontEnum[] {
-                LtFonts.SLIDE_ITEM
+                LtFonts.SLIDE_ITEM,
+                LtFonts.TYPEWRITER
         });
     }
 
