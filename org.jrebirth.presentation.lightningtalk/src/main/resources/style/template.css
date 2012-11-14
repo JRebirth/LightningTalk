@@ -20,6 +20,11 @@
 	-fx-fill: #CCCCCC;
 }
 
+.wazaa .introTitle {
+	-fx-font : 120px "mizike";
+	-fx-fill: #0C2673;
+}
+
 .header{
 	
 	/*-fx-fill:  linear-gradient(from 0% 0% to 100% 100%, white 100%, white 70%);*/
@@ -137,12 +142,24 @@ VBox.me{
 	-fx-background-repeat : no-repeat;
 }
 
+.dogfooding .introTitle {
+	-fx-font : 70px "White Rabbit";
+	-fx-fill: #CCCCCC;
+}
+
 /** DogFooding */
 .dogfooding {
 	-fx-background-image : url("../images/splash/Dog_Fooding.jpg");
 	-fx-background-position: center center;
 	-fx-background-repeat : no-repeat;
 }
+
+
+
+/** DogFooding * /
+.wazaa {
+	
+}*/
 
 BorderPane.raw Text {
 	-fx-fill : #FFFFFF;

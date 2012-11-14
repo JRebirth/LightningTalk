@@ -102,7 +102,9 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
     protected List<FontEnum> getFontToPreload() {
         return Arrays.asList(new FontEnum[] {
                 LtFonts.SLIDE_ITEM,
-                LtFonts.TYPEWRITER
+                LtFonts.TYPEWRITER,
+                LtFonts.DOG_SPLASH,
+                LtFonts.WAZAA_SPLASH
         });
     }
 

@@ -21,6 +21,10 @@ public enum LtFontsLoader implements FontName {
 
     MIZIKE,
 
+    whiterabbit,
+
+    Turtles,
+
     /** . */
     Neuton_Cursive;
 

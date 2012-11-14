@@ -27,6 +27,10 @@ public enum LtFonts implements FontEnum {
 
     SLIDE_ITEM(new RealFont(LtFontsLoader.Neuton_Cursive, 10)),
 
+    DOG_SPLASH(new RealFont(LtFontsLoader.whiterabbit, 20)),
+
+    WAZAA_SPLASH(new RealFont(LtFontsLoader.Turtles, 20)),
+
     PREZ_TITLE(new RealFont(LtFontsLoader.Harabara, 26));
 
     /**

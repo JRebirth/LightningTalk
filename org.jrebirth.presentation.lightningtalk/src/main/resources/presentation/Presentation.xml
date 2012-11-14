@@ -12,7 +12,6 @@
 
 	<slides defaultModelClass="org.jrebirth.presentation.lightningtalk.ui.slides.basic.BasicModel">
 
-
 		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 		</slide>
 		
@@ -22,7 +21,7 @@
 		</slide>
 
 		<!-- MOI -->
-		<slide style="me" showAnimation="MoveFromRight" hideAnimation="FadeOut">
+		<slide style="me" showAnimation="MoveFromLeft" hideAnimation="MoveToRight">
 			<title>Sébastien Bordes</title>
 			<content>
 				<item>Développeur</item>
@@ -41,7 +40,7 @@
 		</slide>
  
  		<!-- Episode précédent -->
-		<slide showAnimation="MoveFromRight" hideAnimation="FadeOut">
+		<slide showAnimation="MoveFromBottom" hideAnimation="FadeOut">
 			<title>Previously On ...</title>
 			<content>
 				<item>ToulouseJUG</item>
@@ -54,8 +53,29 @@
 				<item level="1" link="true">www.jrebirth.org/lightningtalk.html</item>
 			</content>
 		</slide>
+		
+		<slide style="dogfooding" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="FadeOut">
+			<title>DogFooding.Mode = On</title>
+		</slide>
+		
+		
+		<!-- Episode précédent -->
+		<slide showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
+			<title>Explore it !</title>
+			<content>
+				<item>Powered by JRebirth JavaFX Framework</item>
+				<item link="true">www.jrebirth.org</item>
+				<item></item>
+				<item>Source available on GitHub</item>
+				<item link="true">https://github.com/JRebirth</item>
+			</content>
+		</slide>
+		
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="wazaa" showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>So\n What's up ???</title>
+		</slide>
  
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+ 		<slide showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
 			<title>Cross-Platform</title>
 			<content>
 				<item>JavaFX 2.2 is available on :</item>
@@ -89,12 +109,15 @@
     Otherwise, plan your migration to Java SE 7 right now.
 -->
 
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+ 		<slide showAnimation="ScaleFromMin" hideAnimation="ScaleToMin">
 			<title>Packaging</title>
 			<content>
 				<item>Native packaging</item>
+				<item level="1">.exe, .msi, bundle image, dmg, rpm</item>
 				<item>Self-installable package</item>
 				<item>Including Java &amp; JavaFX Runtimes</item>
+				<item level="1">Redistribution allowed</item>
+				<item>... but still require ant</item>
 			</content>
 		</slide>
  
@@ -108,9 +131,10 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 
 -->
 
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
-			<title>Multi-Touch</title>
+ 		<slide showAnimation="FadeIn" hideAnimation="MoveToBottom">
+			<title>Event Handlers</title>
 			<content>
+				<item>Multi-Touch &amp; Gesture</item>
 				<item>Rotate</item>
 				<item level="1">ROTATION_STARTED, ROTATE, ROTATION_FINISHED</item>
 				<item>Scroll</item>
@@ -129,8 +153,39 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
     market that is usually overseen by most application developers, but that is thriving.
 
 -->
+ 
+<!-- 
+    The JavaFX Canvas API, a Canvas 2D drawing surface that provides HTML5 Canvas-style operations. Developers familiar with HTML5 will definitely 
+    be at ease with the JavaFX Canvas API, although it is important to notice that this is not meant to be a duplicate of the HTML5 Canvas Graphics API.
+     We believe this API will also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” 
+     canvas demo under the section “NEW!” of the Ensemble sample application, or you can watch the making of another Canvas example on this video.
 
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+-->
+
+		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.control.ControlModel" showAnimation="MoveFromTop" hideAnimation="MoveToLeft">
+			<title>New controls</title>
+			<content>
+				<item>JFxtras 2 </item>
+				<item link="true">jfxtras.org/</item>
+				<item>Lot of control improvements</item>
+				<item>JavaFX UI controls sandbox</item>
+				<item link="true">hg.openjdk.java.net/openjfx/sandbox-8/controls/rt</item>
+			</content>
+		</slide>
+ 
+ 
+ 		<slide showAnimation="MoveFromRight" hideAnimation="MoveToTop">
+			<title>Media</title>
+			<content>
+				<item>WebView enhanced</item>
+				<item>Read &amp; Write pixels</item>
+				<item>Enhanced font rendering on LCD displays</item>
+				<item>MPEG-4 with H.264/AVC video and AAC audio codec</item>
+				<item>HTTP Live Streaming with playlist</item>
+			</content>
+		</slide>
+		
+		 <slide showAnimation="MoveFromBottom" hideAnimation="ScaleToMin">
 			<title>Canvas</title>
 			<content>
 				<item>GraphicsContext</item>
@@ -141,43 +196,16 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 			</content>
 		</slide>
 		
-		 <slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
-			<title>Canvas</title>
-		</slide>
- 
-<!-- 
-    The JavaFX Canvas API, a Canvas 2D drawing surface that provides HTML5 Canvas-style operations. Developers familiar with HTML5 will definitely 
-    be at ease with the JavaFX Canvas API, although it is important to notice that this is not meant to be a duplicate of the HTML5 Canvas Graphics API.
-     We believe this API will also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” 
-     canvas demo under the section “NEW!” of the Ensemble sample application, or you can watch the making of another Canvas example on this video.
-
--->
-
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
-			<title>Image manipulation</title>
-			<content>
-				<item>Read &amp; Write pixels</item>
-			</content>
+		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="ScaleFromMax" hideAnimation="ScaleToMax">
 		</slide>
  
 <!-- 
     JavaFX 2.2 introduces the ability to read and write pixels to and from JavaFX image objects. An example is available as “Image Operator” in
      the “NEW!” section of Ensemble.
 
--->
-
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
-			<title>New controls</title>
-			<content>
-				<item>Native packaging</item>
-			</content>
-		</slide>
- 
-<!-- 
     Two new UI controls have been added to JavaFX 2.2: a color picker, and a pagination control; you can give them a try in the “NEW!” section of
      Ensemble. In addition, the WebView control now provides the ability to manage web history. Finally, we have documented how to create a 
      custom control with FXML, which takes advantage of FXML enhancements.
-
 
     HTTP Live Streaming support is a feature that strengthens up JavaFX’s media support. Essentially, media players are now able to switch to 
     alternate video and audio streams, as specified in a downloadable playlist file and based on network conditions.
@@ -191,6 +219,11 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 				<item>SWT integration documentation</item>
 				<item></item>
 				<item>New stable SceneBuilder 1.0</item>
+				<item link="true">www.oracle.com/technetwork/java/javafx/tools</item>
+				<item></item>
+				<item>Scenic View, Visual Debugger</item>
+				<item link="true">fxexperience.com/scenic-view/</item>
+				
 			</content>
 		</slide>
  
@@ -206,11 +239,49 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 
 In summary, JavaFX 2.2 is a key release that brings much more than Linux support. It fulfills Oracle’s vision to integrate JavaFX with Java SE 
 to a large extent, and is a proof of our commitment for cross-platform support and predictable timelines. 
+-->
+  		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+			<title>Java 8 Overview</title>
+			<content>
+				<item>No more JavaFX version</item>
+				<item></item>
+				<item>Allow QuantumRenderer &amp; JAT to run in parallel</item>
+				<item></item>
+				<item>Performance improvements :</item>
+				<item level="1">more than 50% in Charts</item>	
+				<item level="1">up to 30% in DirtyArea</item>
+				<item level="1">more than 100% in some Controls</item>
+				<item level="1">between 20 to 100% in Guimark</item>
+			</content>
+		</slide>
+		
+		<!-- 
+		There are a lot of improvements integrated into fx8.0. Most significant are:
+
+    Multithreading has been implemented and turned on
+        RT-15195 “Allow QuantumRenderer thread and FX Application thread to run in parallel”
+    A lot of Controls improvements including:
+        RT-23873 “Investigate (and improve) ListView / TreeView / TableView performance”
+        RT-20840 “fx2.2-h17-b01: Adding new column to TableView results in creating new N columns instead of 1″
+        RT-22244 “Pisces Renderer shows huge performance win when coded in C”
+    Web node improvements
+
+JavaFX 8.0 performance was improved for almost all benchmarks. In particular performance was improved for:
+
+    more than 50% in Charts
+    more than 100% in some Controls
+    up to 30% in DirtyArea
+    more than 20% in FXFire
+    up to 30% in Guimark2.Bitmap and Guimark2.Vector
+    up to 30% in JFXPanel-GUIMark2.Bitmap and more than 100% in JFXPanel-GUIMark2.Vector
+    more than 30% in Layout
+    up to 20% in WebNode.Guimark2-Text
+
+		
+		-->
  
  
- 
-  -->
- 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" hideAnimation="MoveToRight" showAnimation="FadeIn">
+ 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="MoveToRight" >
 			<content>
 				<item image="images/splash/Merci.png" />
 			</content>
@@ -219,7 +290,7 @@ to a large extent, and is a proof of our commitment for cross-platform support a
 		<!-- Des Questions -->
 		<!-- <slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel"> <title>Avez-vous des\nquestions ?</title> </slide> -->
 
-		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="MoveFromLeft">
+		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="MoveFromRight">
 			<content>
 				<item image="images/splash/Q_and_R.png" />
 			</content>
