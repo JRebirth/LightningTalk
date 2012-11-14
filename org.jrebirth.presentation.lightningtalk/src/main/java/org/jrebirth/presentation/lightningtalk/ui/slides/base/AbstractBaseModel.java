@@ -11,14 +11,6 @@ import org.jrebirth.presentation.ui.base.SlideStep;
 public abstract class AbstractBaseModel<M extends AbstractBaseModel<M, V, S>, V extends AbstractBaseView<?, ?, ?>, S extends SlideStep> extends AbstractSlideModel<M, V, S> {
 
     /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void showSlideStep(final SlideStep slideStep) {
-
-    }
-
-    /**
      * Return the title string from the slide object.
      * 
      * @return the slide title
