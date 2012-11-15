@@ -36,7 +36,7 @@ public final class ControlController extends AbstractBaseController<ControlModel
             @Override
             public void handle(final MouseEvent event) {
                 System.out.println("ss");
-                event.consume();
+                // event.consume();
 
             }
         });

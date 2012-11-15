@@ -14,10 +14,10 @@
 
 		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 		</slide>
-		
+
 		<!-- Presentation Title -->
- 		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
-			<title>   JavaFX 2.2\n\t What's Up ?</title>
+		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
+			<title> JavaFX 2.2\n\t What's Up ?</title>
 		</slide>
 
 		<!-- MOI -->
@@ -38,44 +38,45 @@
 				<item level="1">xoxi@xoxi.fr</item>
 			</content>
 		</slide>
- 
- 		<!-- Episode précédent -->
+
+		<!-- Episode précédent -->
 		<slide showAnimation="MoveFromBottom" hideAnimation="FadeOut">
 			<title>Previously On ...</title>
 			<content>
 				<item>ToulouseJUG</item>
-				<item level="1" link="true">www.jrebirth.org/toulousejug.html</item>
+				<item level="1" link="true">www.jrebirth.org/toulousejug</item>
 				<item>EclipseDay</item>
-				<item level="1" link="true">www.jrebirth.org/eclipseday.html</item>
+				<item level="1" link="true">www.jrebirth.org/eclipseday</item>
 				<item>Breizhcamp</item>
-				<item level="1" link="true">www.jrebirth.org/breizhcamp.html</item>
+				<item level="1" link="true">www.jrebirth.org/breizhcamp</item>
 				<item>ToulouseJUG Lightning Talk</item>
-				<item level="1" link="true">www.jrebirth.org/lightningtalk.html</item>
+				<item level="1" link="true">www.jrebirth.org/lightningtalk</item>
 			</content>
 		</slide>
-		
+
 		<slide style="dogfooding" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 			<title>DogFooding.Mode = On</title>
 		</slide>
-		
-		
-		<!-- Episode précédent -->
+
+
+		<!-- Read source -->
 		<slide showAnimation="SlidingTopBottomProgressive" hideAnimation="FadeOut">
 			<title>Explore it !</title>
 			<content>
-				<item>Powered by JRebirth JavaFX Framework</item>
-				<item link="true">www.jrebirth.org</item>
-				<item></item>
 				<item>Source available on GitHub</item>
 				<item link="true">https://github.com/JRebirth</item>
+				<item></item>
+				<item>Powered by JRebirth JavaFX Framework</item>
+				<item link="true">www.jrebirth.org</item>
+				<item image="images/me/JRebirth_128x128.png"></item>
 			</content>
 		</slide>
-		
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="wazaa" showAnimation="FadeIn" hideAnimation="ScaleToMin">
+
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" showAnimation="FadeIn" hideAnimation="ScaleToMin">
 			<title>So\n What's up ???</title>
 		</slide>
- 
- 		<slide showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
+
+		<slide showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
 			<title>Cross-Platform</title>
 			<content>
 				<item>JavaFX 2.2 is available on :</item>
@@ -83,33 +84,26 @@
 				<item level="1">Mac OS X (64-bit)</item>
 				<item level="1">Linux (32-bit &amp; 64-bit)</item>
 				<item>OpenJFX in OpenJDK</item>
-				<item>Since Java SE 7u6</item>
-				<item>Unified installer &amp; installation</item>
-				<item>jfxrt.jar</item>
+				<item>Full Unified installer</item>
+				<item level="1">Since Java SE 7u6</item>
+				<item>jfxrt.jar included</item>
+				<item level="1">Require some hack to generate Javadoc</item>
 			</content>
 		</slide>
- 
- 
- 
- <!-- 
- 
- Earlier this week, Oracle released JavaFX 2.2, which is a significant update release:
 
-    With version 2.2, JavaFX is finally available on Windows (32-bit &amp; 64-bit), Mac OS X (64-bit), and Linux (32-bit &amp; 64-bit), which means that most developers
-     can build and test JavaFX applications on their preferred development environment. Have a look at the JavaFX Certified System Configurations for more details.
 
-    The JavaFX 2.2 Runtime is now part of Oracle’s Java SE 7u6 implementation. While we already had some form of integration between these two products 
-    since December 2011, , we now have one unified installer, with the JavaFX libraries installed alongside the Java SE libraries for both the JDK and 
-    the JRE. This means a more streamlined user experience, and the assurance for application developers that the number of computers capable of running 
-    JavaFX applications will soon be as large as for Java SE applications.
 
-    A stand-alone implementation of JavaFX 2 will remain available for Java SE 6 users, but only on Windows. Additionally, that stand-alone version will 
-    no longer be supported when Java SE 6 reaches End of Life (EOL) in February 2013. As explained previously, this means there will no longer be bug 
-    fixes or security fixes available for Java SE 6 users after that date, unless you or your customers sign up for our commercial Java SE Support offering. 
-    Otherwise, plan your migration to Java SE 7 right now.
--->
+		<!-- Earlier this week, Oracle released JavaFX 2.2, which is a significant update release: With version 2.2, JavaFX is finally available on Windows (32-bit &amp; 
+			64-bit), Mac OS X (64-bit), and Linux (32-bit &amp; 64-bit), which means that most developers can build and test JavaFX applications on their preferred development 
+			environment. Have a look at the JavaFX Certified System Configurations for more details. The JavaFX 2.2 Runtime is now part of Oracle’s Java SE 7u6 implementation. 
+			While we already had some form of integration between these two products since December 2011, , we now have one unified installer, with the JavaFX libraries installed 
+			alongside the Java SE libraries for both the JDK and the JRE. This means a more streamlined user experience, and the assurance for application developers that the 
+			number of computers capable of running JavaFX applications will soon be as large as for Java SE applications. A stand-alone implementation of JavaFX 2 will remain 
+			available for Java SE 6 users, but only on Windows. Additionally, that stand-alone version will no longer be supported when Java SE 6 reaches End of Life (EOL) in 
+			February 2013. As explained previously, this means there will no longer be bug fixes or security fixes available for Java SE 6 users after that date, unless you 
+			or your customers sign up for our commercial Java SE Support offering. Otherwise, plan your migration to Java SE 7 right now. -->
 
- 		<slide showAnimation="ScaleFromMin" hideAnimation="ScaleToMin">
+		<slide showAnimation="ScaleFromMin" hideAnimation="ScaleToMin">
 			<title>Packaging</title>
 			<content>
 				<item>Native packaging</item>
@@ -117,21 +111,16 @@
 				<item>Self-installable package</item>
 				<item>Including Java &amp; JavaFX Runtimes</item>
 				<item level="1">Redistribution allowed</item>
-				<item>... but still require ant</item>
+				<item>... but still require ant :(</item>
 			</content>
 		</slide>
- 
-<!-- 
-Besides these important changes, JavaFX 2.2 brings in some key new features:
 
-    JavaFX applications can now be redistributed as self-contained application packages. These platform-specific packages include all application 
-    resources and a private copy of Java and JavaFX Runtimes. Distributed as a native installable package, they provide the same installation 
-    and launch experience as native applications for that operating system. A key benefit to take into consideration is that it will allow 
-    you to deploy JavaFX 2.2 applications bundled with Java SE 7 without impacting existing deployments of older Java SE implementations.
+		<!-- Besides these important changes, JavaFX 2.2 brings in some key new features: JavaFX applications can now be redistributed as self-contained application packages. 
+			These platform-specific packages include all application resources and a private copy of Java and JavaFX Runtimes. Distributed as a native installable package, they 
+			provide the same installation and launch experience as native applications for that operating system. A key benefit to take into consideration is that it will allow 
+			you to deploy JavaFX 2.2 applications bundled with Java SE 7 without impacting existing deployments of older Java SE implementations. -->
 
--->
-
- 		<slide showAnimation="FadeIn" hideAnimation="MoveToBottom">
+		<slide showAnimation="FadeIn" hideAnimation="MoveToBottom">
 			<title>Event Handlers</title>
 			<content>
 				<item>Multi-Touch &amp; Gesture</item>
@@ -145,36 +134,32 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 				<item level="1">ZOOM_STARTED, ZOOM, ZOOM_FINISHED</item>
 			</content>
 		</slide>
- 
-<!-- 
-    Multi-touch support for touch-enabled devices. As of today this is mostly relevant for desktop-class touch screen displays and touch pads, 
-    this will enable the adoption of sophisticated UIs on embedded devices running Java SE Embedded on ARM-based chipsets, such as kiosks, 
-    telemetry systems, healthcare devices, multi-function printers, monitoring systems, etc. This is a segment of the Java application 
-    market that is usually overseen by most application developers, but that is thriving.
 
--->
- 
-<!-- 
-    The JavaFX Canvas API, a Canvas 2D drawing surface that provides HTML5 Canvas-style operations. Developers familiar with HTML5 will definitely 
-    be at ease with the JavaFX Canvas API, although it is important to notice that this is not meant to be a duplicate of the HTML5 Canvas Graphics API.
-     We believe this API will also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” 
-     canvas demo under the section “NEW!” of the Ensemble sample application, or you can watch the making of another Canvas example on this video.
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="kiosk" showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
+		</slide>
 
--->
+		<!-- Multi-touch support for touch-enabled devices. As of today this is mostly relevant for desktop-class touch screen displays and touch pads, this will enable 
+			the adoption of sophisticated UIs on embedded devices running Java SE Embedded on ARM-based chipsets, such as kiosks, telemetry systems, healthcare devices, multi-function 
+			printers, monitoring systems, etc. This is a segment of the Java application market that is usually overseen by most application developers, but that is thriving. -->
+
+		<!-- The JavaFX Canvas API, a Canvas 2D drawing surface that provides HTML5 Canvas-style operations. Developers familiar with HTML5 will definitely be at ease 
+			with the JavaFX Canvas API, although it is important to notice that this is not meant to be a duplicate of the HTML5 Canvas Graphics API. We believe this API will 
+			also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” canvas demo under the section “NEW!” of the Ensemble 
+			sample application, or you can watch the making of another Canvas example on this video. -->
 
 		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.control.ControlModel" showAnimation="MoveFromTop" hideAnimation="MoveToLeft">
 			<title>New controls</title>
 			<content>
-				<item>JFxtras 2 </item>
-				<item link="true">jfxtras.org/</item>
+				<item>JFXtras 2</item>
+				<item link="true">jfxtras.org</item>
 				<item>Lot of control improvements</item>
 				<item>JavaFX UI controls sandbox</item>
 				<item link="true">hg.openjdk.java.net/openjfx/sandbox-8/controls/rt</item>
 			</content>
 		</slide>
- 
- 
- 		<slide showAnimation="MoveFromRight" hideAnimation="MoveToTop">
+
+
+		<slide showAnimation="MoveFromRight" hideAnimation="MoveToTop">
 			<title>Media</title>
 			<content>
 				<item>WebView enhanced</item>
@@ -184,35 +169,32 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 				<item>HTTP Live Streaming with playlist</item>
 			</content>
 		</slide>
-		
-		 <slide showAnimation="MoveFromBottom" hideAnimation="ScaleToMin">
+
+		<slide showAnimation="MoveFromBottom" hideAnimation="ScaleToMin">
 			<title>Canvas</title>
 			<content>
+				<item>Canvas != FXCanvas</item>
 				<item>GraphicsContext</item>
-				<item>Draw &amp; Fill methods</item>
+				<item>Draw &amp; Fill methods (and more)</item>
+				<item level="1">gc.setFill(Color.BLUE);</item>
+				<item level="1">gc.fillRect(75,75,100,100);</item>
 				<item>Save &amp; Restore methods</item>
+				<item level="1">equivalent to push &amp; pop</item>
 				<item>Effects &amp; Transform</item>
-				
+				<item level="1">Canvas &amp; Stack</item>
 			</content>
 		</slide>
-		
+
 		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="ScaleFromMax" hideAnimation="ScaleToMax">
 		</slide>
- 
-<!-- 
-    JavaFX 2.2 introduces the ability to read and write pixels to and from JavaFX image objects. An example is available as “Image Operator” in
-     the “NEW!” section of Ensemble.
 
-    Two new UI controls have been added to JavaFX 2.2: a color picker, and a pagination control; you can give them a try in the “NEW!” section of
-     Ensemble. In addition, the WebView control now provides the ability to manage web history. Finally, we have documented how to create a 
-     custom control with FXML, which takes advantage of FXML enhancements.
+		<!-- JavaFX 2.2 introduces the ability to read and write pixels to and from JavaFX image objects. An example is available as “Image Operator” in the “NEW!” section 
+			of Ensemble. Two new UI controls have been added to JavaFX 2.2: a color picker, and a pagination control; you can give them a try in the “NEW!” section of Ensemble. 
+			In addition, the WebView control now provides the ability to manage web history. Finally, we have documented how to create a custom control with FXML, which takes 
+			advantage of FXML enhancements. HTTP Live Streaming support is a feature that strengthens up JavaFX’s media support. Essentially, media players are now able to switch 
+			to alternate video and audio streams, as specified in a downloadable playlist file and based on network conditions. -->
 
-    HTTP Live Streaming support is a feature that strengthens up JavaFX’s media support. Essentially, media players are now able to switch to 
-    alternate video and audio streams, as specified in a downloadable playlist file and based on network conditions.
-
--->
-
- 		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
 			<title>Integration</title>
 			<content>
 				<item>Swing integration documentation</item>
@@ -223,24 +205,17 @@ Besides these important changes, JavaFX 2.2 brings in some key new features:
 				<item></item>
 				<item>Scenic View, Visual Debugger</item>
 				<item link="true">fxexperience.com/scenic-view/</item>
-				
+
 			</content>
 		</slide>
- 
-<!-- 
-    Additional information to help Swing developers implement a Swing application in JavaFX, and SWT developers to integrate JavaFX content in 
-    SWT applications. We also have documented some Best Practices for developing a JavaFX application.
 
-    Last but not the least, JavaFX developers can now leverage the new JavaFX Scene Builder 1.0 to visually layout an application UI, and generate 
-    FXML content that helps keep a clean separation between application logic and UI. Scene Builder is also a great example of a complex 
-    application written in JavaFX. It is currently available on Windows and Mac OS X, and is optimized to work seamlessly with NetBeans 7.2 
-    or higher (it can also be used with other Java IDEs).
-
-
-In summary, JavaFX 2.2 is a key release that brings much more than Linux support. It fulfills Oracle’s vision to integrate JavaFX with Java SE 
-to a large extent, and is a proof of our commitment for cross-platform support and predictable timelines. 
--->
-  		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
+		<!-- Additional information to help Swing developers implement a Swing application in JavaFX, and SWT developers to integrate JavaFX content in SWT applications. 
+			We also have documented some Best Practices for developing a JavaFX application. Last but not the least, JavaFX developers can now leverage the new JavaFX Scene 
+			Builder 1.0 to visually layout an application UI, and generate FXML content that helps keep a clean separation between application logic and UI. Scene Builder is 
+			also a great example of a complex application written in JavaFX. It is currently available on Windows and Mac OS X, and is optimized to work seamlessly with NetBeans 
+			7.2 or higher (it can also be used with other Java IDEs). In summary, JavaFX 2.2 is a key release that brings much more than Linux support. It fulfills Oracle’s 
+			vision to integrate JavaFX with Java SE to a large extent, and is a proof of our commitment for cross-platform support and predictable timelines. -->
+		<slide showAnimation="FadeIn" hideAnimation="ScaleToMin">
 			<title>Java 8 Overview</title>
 			<content>
 				<item>No more JavaFX version</item>
@@ -248,40 +223,22 @@ to a large extent, and is a proof of our commitment for cross-platform support a
 				<item>Allow QuantumRenderer &amp; JAT to run in parallel</item>
 				<item></item>
 				<item>Performance improvements :</item>
-				<item level="1">more than 50% in Charts</item>	
+				<item level="1">more than 50% in Charts</item>
 				<item level="1">up to 30% in DirtyArea</item>
 				<item level="1">more than 100% in some Controls</item>
 				<item level="1">between 20 to 100% in Guimark</item>
 			</content>
 		</slide>
-		
-		<!-- 
-		There are a lot of improvements integrated into fx8.0. Most significant are:
 
-    Multithreading has been implemented and turned on
-        RT-15195 “Allow QuantumRenderer thread and FX Application thread to run in parallel”
-    A lot of Controls improvements including:
-        RT-23873 “Investigate (and improve) ListView / TreeView / TableView performance”
-        RT-20840 “fx2.2-h17-b01: Adding new column to TableView results in creating new N columns instead of 1″
-        RT-22244 “Pisces Renderer shows huge performance win when coded in C”
-    Web node improvements
+		<!-- There are a lot of improvements integrated into fx8.0. Most significant are: Multithreading has been implemented and turned on RT-15195 “Allow QuantumRenderer 
+			thread and FX Application thread to run in parallel” A lot of Controls improvements including: RT-23873 “Investigate (and improve) ListView / TreeView / TableView 
+			performance” RT-20840 “fx2.2-h17-b01: Adding new column to TableView results in creating new N columns instead of 1″ RT-22244 “Pisces Renderer shows huge performance 
+			win when coded in C” Web node improvements JavaFX 8.0 performance was improved for almost all benchmarks. In particular performance was improved for: more than 50% 
+			in Charts more than 100% in some Controls up to 30% in DirtyArea more than 20% in FXFire up to 30% in Guimark2.Bitmap and Guimark2.Vector up to 30% in JFXPanel-GUIMark2.Bitmap 
+			and more than 100% in JFXPanel-GUIMark2.Vector more than 30% in Layout up to 20% in WebNode.Guimark2-Text -->
 
-JavaFX 8.0 performance was improved for almost all benchmarks. In particular performance was improved for:
 
-    more than 50% in Charts
-    more than 100% in some Controls
-    up to 30% in DirtyArea
-    more than 20% in FXFire
-    up to 30% in Guimark2.Bitmap and Guimark2.Vector
-    up to 30% in JFXPanel-GUIMark2.Bitmap and more than 100% in JFXPanel-GUIMark2.Vector
-    more than 30% in Layout
-    up to 20% in WebNode.Guimark2-Text
-
-		
-		-->
- 
- 
- 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="MoveToRight" >
+		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="ScaleFromMax" hideAnimation="FadeOut">
 			<content>
 				<item image="images/splash/Merci.png" />
 			</content>
@@ -290,13 +247,13 @@ JavaFX 8.0 performance was improved for almost all benchmarks. In particular per
 		<!-- Des Questions -->
 		<!-- <slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel"> <title>Avez-vous des\nquestions ?</title> </slide> -->
 
-		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="MoveFromRight">
+		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 			<content>
 				<item image="images/splash/Q_and_R.png" />
 			</content>
 		</slide>
- 
- 
+
+
 	</slides>
 
 </presentation>
