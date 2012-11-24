@@ -58,4 +58,12 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, Pane, PlaceCo
     @Override
     public void doReload() {
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doHide() {
+        // Nothing to do yet
+    }
 }

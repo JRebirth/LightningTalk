@@ -10,6 +10,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<jrebirth.jnlp.filename>LightningTalk.jnlp</jrebirth.jnlp.filename>
+		<jrebirth.main.class>org.jrebirth.presentation.lightningtalk.LightningTalk</jrebirth.main.class>
+
 	</properties>
 
 	<issueManagement>
@@ -86,14 +90,12 @@
 					<archive>
 						<manifestEntries>
 							<JavaFX-Version>2.0</JavaFX-Version>
-							<Main-Class>org.jrebirth.presentation.lightningtalk.LightningTalk</Main-Class>
-
-
+							<Main-Class>${jrebirth.main.class}</Main-Class>
 							<implementation-vendor>seb</implementation-vendor>
 							<implementation-title>Prez</implementation-title>
 							<implementation-version>1.0</implementation-version>
 							<JavaFX-Application-Class>org.jrebirth.presentation.lightningtalk.LightningTalk</JavaFX-Application-Class>
-							<JavaFX-Class-Path>presentation-0.4.0-SNAPSHOT.jar
+							<JavaFX-Class-Path>presentation-0.7.0-SNAPSHOT.jar
 								jaxb-api-2.2.1.jar stax-api-1.0-2.jar activation-1.1.jar
 								jaxb-impl-2.2.1.jar core-0.7.0-SNAPSHOT.jar</JavaFX-Class-Path>
 							<!-- implementation-vendor: I implementation-title: Jrebirth demo implementation-version: 1.0 JavaFX-Application-Class: org.jrebirth.demo.JRebirthDemo Created-By: 
@@ -105,19 +107,10 @@
 
 						</manifest>
 					</archive>
-					<!-- <keystore>jrebirth.jks</keystore> <alias>jrebirth</alias> <storepass>gojava</storepass> <signedjar>${project.build.directory}/signed/${project.build.finalName}.jar</signedjar> 
-						<verify>true</verify> -->
-
 				</configuration>
 			</plugin>
 
-			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <configuration> <archive> <manifest> <mainClass>org.jrebirth.presentation.Presentation</mainClass> 
-				</manifest> </archive> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> </descriptorRefs> </configuration> <executions> <execution> <id>make-my-jar-with-dependencies</id> 
-				<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> </executions> </plugin> -->
-
-
 			<plugin>
-
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>webstart-maven-plugin</artifactId>
 				<version>1.0-beta-3</version>
@@ -140,7 +133,7 @@
 					<excludeTransitive>false</excludeTransitive>
 
 					<!-- The path where the libraries are stored within the jnlp structure. not required. by default the libraries are within the working directory -->
-					<!-- >libPath>lib</libPath -->
+					<libPath>lib</libPath>
 
 					<!-- [optional] transitive dependencies filter - if omitted, all transitive dependencies are included -->
 					<!-- <dependencies> Note that only groupId and artifactId must be specified here. because of a limitation of the Include/ExcludesArtifactFilter <includes> <include>org.jrebirth:presentation</include> 
@@ -153,11 +146,11 @@
 						<!-- default values -->
 						<!--inputTemplateResourcePath>${project.basedir}</inputTemplateResourcePath -->
 						<!-- inputTemplate>src/main/jnlp/template.vm</inputTemplate --> <!-- relative to inputTemplateResourcePath -->
-						<outputFile>LightningTalk.jnlp</outputFile> <!-- defaults to launch.jnlp -->
+						<outputFile>${jrebirth.jnlp.filename}</outputFile> <!-- defaults to launch.jnlp -->
 
 						<!-- used to automatically identify the jar containing the main class. -->
 						<!-- this is perhaps going to change -->
-						<mainClass>org.jrebirth.presentation.lightningtalk.LightningTalk</mainClass>
+						<mainClass>${jrebirth.main.class}</mainClass>
 					</jnlp>
 
 
@@ -165,29 +158,40 @@
 					<!-- defining this will automatically sign the jar and its dependencies, if necessary -->
 					<sign>
 						<keystore>${basedir}/jrebirth.jks</keystore>
-						<keypass>gojava</keypass>  <!-- we need to override passwords easily from the command line. ${keypass} -->
-						<storepass>gojava</storepass> <!-- ${storepass} -->
+						<keypass>${keypass}</keypass>  <!-- we need to override passwords easily from the command line.  -->
+						<storepass>${storepass}</storepass>
 						<!--storetype>fillme</storetype -->
+						
 						<alias>jrebirth</alias>
 
-						<!--validity>fillme</validity -->
+						<validity>360</validity>
 
 						<!-- only required for generating the keystore -->
-						<!--dnameCn>fillme</dnameCn> <dnameOu>fillme</dnameOu> <dnameO>fillme</dnameO> <dnameL>fillme</dnameL> <dnameSt>fillme</dnameSt> <dnameC>fillme</dnameC -->
-
+						<dnameCn>www.jrebirth.org</dnameCn>
+						<dnameOu>None</dnameOu>
+						<dnameO>JRebirth</dnameO>
+						<dnameL>Toulouse</dnameL>
+						<dnameSt>HG</dnameSt>
+						<dnameC>FR</dnameC>
+						
 						<verify>true</verify> <!-- verify that the signing operation succeeded -->
 
 						<!-- KEYSTORE MANAGEMENT -->
-						<!-- <keystoreConfig> <delete>true</delete> delete the keystore <gen>true</gen> optional shortcut to generate the store. </keystoreConfig> -->
+						<keystoreConfig>
+							<!-- delete the keystore -->
+							<delete>true</delete>
+							<!-- optional shortcut to generate the store. -->
+							<gen>true</gen>
+						</keystoreConfig>
 					</sign>
 
 					<!-- BUILDING PROCESS -->
 
-					<pack200>false</pack200>
-					<gzip>false</gzip> <!-- default force when pack200 false, true when pack200 selected ?? -->
+					<pack200>true</pack200>
+					<gzip>true</gzip> <!-- default force when pack200 false, true when pack200 selected ?? -->
 
 					<!-- causes a version attribute to be output in each jar resource element, optional, default is false -->
-					<!-- <outputJarVersions>true</outputJarVersions> -->
+					<outputJarVersions>true</outputJarVersions>
 
 					<!--install>false</install --> <!-- not yet supported -->
 					<verbose>true</verbose>
