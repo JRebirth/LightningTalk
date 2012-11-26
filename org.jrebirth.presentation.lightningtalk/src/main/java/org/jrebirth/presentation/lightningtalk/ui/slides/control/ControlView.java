@@ -1,3 +1,20 @@
+/**
+ * Get more info at : www.jrebirth.org .
+ * Copyright JRebirth.org © 2011-2013
+ * Contact : sebastien.bordes@jrebirth.org
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.jrebirth.presentation.lightningtalk.ui.slides.control;
 
 import javafx.event.ActionEvent;
@@ -27,6 +44,7 @@ import javafx.util.Callback;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
 
+// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>ControlView</strong>.
@@ -37,7 +55,10 @@ import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
  */
 public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane, ControlController> {
 
+    /** The pagination. */
     private Pagination pagination;
+    
+    /** The images. */
     private final Image[] images = new Image[7];
 
     /**
@@ -126,7 +147,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
     /**
      * TODO To complete.
      * 
-     * @param node
+     * @param node the node
      */
     private void ignoreClick(final Node node) {
         node.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
@@ -139,6 +160,12 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         });
     }
 
+    /**
+     * Creates the rgb string.
+     * 
+     * @param c the c
+     * @return the string
+     */
     private String createRGBString(final Color c) {
         return "-fx-base: rgb(" + c.getRed() * 255 + "," + c.getGreen() * 255 + "," + c.getBlue() * 255 + ");";
     }
@@ -191,6 +218,12 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
     }
 
     // Creates the page content
+    /**
+     * Creates the picture page.
+     * 
+     * @param pageIndex the page index
+     * @return the v box
+     */
     private VBox createPicturePage(final int pageIndex) {
         final VBox box = new VBox();
         final ImageView iv = new ImageView(this.images[pageIndex]);

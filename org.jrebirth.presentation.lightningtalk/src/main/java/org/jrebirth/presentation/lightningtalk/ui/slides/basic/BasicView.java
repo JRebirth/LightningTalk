@@ -1,3 +1,20 @@
+/**
+ * Get more info at : www.jrebirth.org .
+ * Copyright JRebirth.org © 2011-2013
+ * Contact : sebastien.bordes@jrebirth.org
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.jrebirth.presentation.lightningtalk.ui.slides.basic;
 
 import java.util.ArrayList;
@@ -66,6 +83,7 @@ import org.jrebirth.presentation.model.SlideItem;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.ui.base.SlideStep;
 
+// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>AbstractTemplateView</strong>.
@@ -100,19 +118,28 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /** The transitionn used between subslides. */
     private ParallelTransition subSlideTransition;
 
+    /** The circle. */
     private Circle circle;
 
+    /** The top rectangle. */
     private Rectangle topRectangle;
+    
+    /** The bottom rectangle. */
     private Rectangle bottomRectangle;
 
+    /** The small pokemon. */
     private SVGPath smallPokemon;
 
+    /** The big pokemon. */
     private SVGPath bigPokemon;
 
+    /** The primary title. */
     private Label primaryTitle;
 
+    /** The prez title. */
     private Label prezTitle;
 
+    /** The place logo. */
     private ImageView placeLogo;
 
     /**
@@ -127,6 +154,8 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     }
 
     /**
+     * Gets the sub title.
+     * 
      * @return Returns the subTitle.
      */
     protected Label getSubTitle() {
@@ -559,7 +588,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /**
      * TODO To complete.
      * 
-     * @param text
+     * @param node the node
      */
     protected void bindNode(final Node node) {
         node.scaleXProperty().bind(bindWidth());
@@ -569,7 +598,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /**
      * TODO To complete.
      * 
-     * @return
+     * @return the number binding
      */
     protected NumberBinding bindHeight() {
         return Bindings.divide(getModel().getLocalFacade().getGlobalFacade().getApplication().getStage().heightProperty(), 768);
@@ -578,7 +607,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /**
      * TODO To complete.
      * 
-     * @return
+     * @return the number binding
      */
     protected NumberBinding bindWidth() {
         return Bindings.divide(getModel().getLocalFacade().getGlobalFacade().getApplication().getStage().widthProperty(), 1024);
@@ -625,6 +654,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /**
      * Build the default content slide.
      * 
+     * @param slideContent the slide content
      * @return the vbox with default content items
      */
     protected VBox buildDefaultContent(final SlideContent slideContent) {
@@ -744,6 +774,11 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
 
     }
 
+    /**
+     * Show custom slide step.
+     * 
+     * @param node the node
+     */
     protected void showCustomSlideStep(final Node node) {
 
         addSubSlide(node);
@@ -760,7 +795,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     /**
      * TODO To complete.
      * 
-     * @param nextSlide
+     * @param nextSlide the next slide
      */
     private void performStepAnimation(final Node nextSlide) {
 
@@ -819,6 +854,8 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
     }
 
     /**
+     * Gets the slide content.
+     * 
      * @return Returns the slideContent.
      */
     protected StackPane getSlideContent() {

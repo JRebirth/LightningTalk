@@ -1,6 +1,19 @@
 /**
- * Copyright (c) 2008, 2012 Oracle and/or its affiliates.
- * All rights reserved. Use is subject to license terms.
+ * Get more info at : www.jrebirth.org .
+ * Copyright JRebirth.org © 2011-2013
+ * Contact : sebastien.bordes@jrebirth.org
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 package org.jrebirth.presentation.lightningtalk.ui.slides.fireworks;
@@ -23,16 +36,39 @@ import javafx.scene.paint.Paint;
 import javafx.scene.paint.RadialGradient;
 import javafx.scene.paint.Stop;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FireworksPane.
+ */
 public class FireworksPane extends Pane {
 
+    /** The timer. */
     private final AnimationTimer timer;
+    
+    /** The canvas. */
     private final Canvas canvas;
+    
+    /** The background. */
     private final ImageView background;
+    
+    /** The opaque background. */
     private final ImageView opaqueBackground;
+    
+    /** The particles. */
     private final List<Particle> particles = new ArrayList<Particle>();
+    
+    /** The colors. */
     private final Paint[] colors;
+    
+    /** The count down till next firework. */
     private int countDownTillNextFirework = 40;
 
+    /**
+     * Instantiates a new fireworks pane.
+     * 
+     * @param backgroundImage the background image
+     * @param opaqueBackgroundImage the opaque background image
+     */
     public FireworksPane(final Image backgroundImage, final Image opaqueBackgroundImage) {
         // create a color palette of 180 colors
         this.colors = new Paint[181];
@@ -81,10 +117,16 @@ public class FireworksPane extends Pane {
         };
     }
 
+    /**
+     * Start.
+     */
     public void start() {
         this.timer.start();
     }
 
+    /**
+     * Stop.
+     */
     public void stop() {
         this.timer.stop();
     }
@@ -114,6 +156,11 @@ public class FireworksPane extends Pane {
         this.canvas.setHeight(height * 0.54);
     }
 
+    /**
+     * Draw fireworks.
+     * 
+     * @param gc the gc
+     */
     private void drawFireworks(final GraphicsContext gc) {
         final Iterator<Particle> iter = this.particles.iterator();
         final List<Particle> newParticles = new ArrayList<Particle>();
@@ -137,6 +184,9 @@ public class FireworksPane extends Pane {
         this.particles.addAll(newParticles);
     }
 
+    /**
+     * Fire particle.
+     */
     private void fireParticle() {
         this.particles.add(new Particle(
                 this.canvas.getWidth() * 0.5, this.canvas.getHeight() + 10,
@@ -146,6 +196,12 @@ public class FireworksPane extends Pane {
                 false, true, true));
     }
 
+    /**
+     * Explode circle.
+     * 
+     * @param firework the firework
+     * @param newParticles the new particles
+     */
     private void explodeCircle(final Particle firework, final List<Particle> newParticles) {
         final int count = 20 + (int) (60 * Math.random());
         final boolean shouldExplodeChildren = Math.random() > 0.5;
@@ -165,6 +221,12 @@ public class FireworksPane extends Pane {
         }
     }
 
+    /**
+     * Explode small circle.
+     * 
+     * @param firework the firework
+     * @param newParticles the new particles
+     */
     private void explodeSmallCircle(final Particle firework, final List<Particle> newParticles) {
         final double angle = Math.PI * 2 / 12;
         for (int count = 12; count > 0; count--) {
