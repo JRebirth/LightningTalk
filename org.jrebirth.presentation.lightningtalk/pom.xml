@@ -3,7 +3,7 @@
 	<groupId>org.jrebirth.presentation</groupId>
 	<artifactId>lightningtalk</artifactId>
 	<version>1.0.0</version>
-	
+
 	<name>JavaFX 2.2 Lightning Talk</name>
 	<url>http://www.jrebirth.org/lightningtalk</url>
 	<description>Interactive Short Presentation of JavaFX 2.2 capabilities</description>
@@ -201,6 +201,13 @@
 					<verbose>true</verbose>
 
 				</configuration>
+			</plugin>
+
+			<!-- Project Quality -->
+			<plugin>
+				<groupId>org.codehaus.sonar</groupId>
+				<artifactId>sonar-maven3-plugin</artifactId>
+				<version>3.2</version>
 			</plugin>
 		</plugins>
 
