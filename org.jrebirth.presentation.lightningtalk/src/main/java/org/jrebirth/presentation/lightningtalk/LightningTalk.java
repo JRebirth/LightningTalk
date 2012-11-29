@@ -35,7 +35,6 @@ import org.jrebirth.core.ui.Model;
 import org.jrebirth.core.wave.Wave;
 import org.jrebirth.presentation.ui.stack.StackModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>LightningTalk</strong>.
  * 
@@ -118,11 +117,13 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
      */
     @Override
     protected List<FontEnum> getFontToPreload() {
+        // return Collections.
+
         return Arrays.asList(new FontEnum[] {
-                LtFonts.SLIDE_ITEM,
                 LtFonts.TYPEWRITER,
                 LtFonts.DOG_SPLASH,
-                LtFonts.WAZAA_SPLASH
+                LtFonts.WAZAA_SPLASH,
+                LtFonts.SLIDE_ITEM
         });
     }
 

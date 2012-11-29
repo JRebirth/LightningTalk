@@ -2,17 +2,24 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jrebirth.presentation</groupId>
 	<artifactId>lightningtalk</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
+	
 	<name>JavaFX 2.2 Lightning Talk</name>
-
-	<url>http://www.jrebirth.org</url>
+	<url>http://www.jrebirth.org/lightningtalk</url>
 	<description>Interactive Short Presentation of JavaFX 2.2 capabilities</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<jrebirth.jnlp.codebase>http://www.jrebirth.org/lightningtalk</jrebirth.jnlp.codebase>
 		<jrebirth.jnlp.filename>LightningTalk.jnlp</jrebirth.jnlp.filename>
 		<jrebirth.main.class>org.jrebirth.presentation.lightningtalk.LightningTalk</jrebirth.main.class>
+
+		<appletWidth>1024</appletWidth>
+		<appletHeight>768</appletHeight>
+
+		<updateCheck>timeout</updateCheck>
+		<updatePolicy>prompt-update</updatePolicy>
 
 	</properties>
 
@@ -91,20 +98,15 @@
 						<manifestEntries>
 							<JavaFX-Version>2.0</JavaFX-Version>
 							<Main-Class>${jrebirth.main.class}</Main-Class>
+							<JavaFX-Application-Class>${jrebirth.main.class}</JavaFX-Application-Class>
+
 							<implementation-vendor>seb</implementation-vendor>
 							<implementation-title>Prez</implementation-title>
 							<implementation-version>1.0</implementation-version>
-							<JavaFX-Application-Class>org.jrebirth.presentation.lightningtalk.LightningTalk</JavaFX-Application-Class>
-							<JavaFX-Class-Path>presentation-0.7.0-SNAPSHOT.jar
-								jaxb-api-2.2.1.jar stax-api-1.0-2.jar activation-1.1.jar
-								jaxb-impl-2.2.1.jar core-0.7.0-SNAPSHOT.jar</JavaFX-Class-Path>
-							<!-- implementation-vendor: I implementation-title: Jrebirth demo implementation-version: 1.0 JavaFX-Application-Class: org.jrebirth.demo.JRebirthDemo Created-By: 
-								Maven Packager Main-Class: com/javafx/main/Main -->
+							<JavaFX-Class-Path>${classpath}</JavaFX-Class-Path>
 						</manifestEntries>
 						<manifest>
-							<!-- <addDefaultImplementationEntries>true</addDefaultImplementationEntries> <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries> -->
 							<addClasspath>true</addClasspath>
-
 						</manifest>
 					</archive>
 				</configuration>
@@ -127,19 +129,22 @@
 				</executions>
 
 				<configuration>
+
+					<!-- <jnlpFiles>${jrebirth.jnlp.filename}</jnlpFiles> -->
 					<!--outputDirectory></outputDirectory --> <!-- not required?? -->
 
 					<!-- Set to true to exclude all transitive dependencies. Default is false. -->
 					<excludeTransitive>false</excludeTransitive>
 
 					<!-- The path where the libraries are stored within the jnlp structure. not required. by default the libraries are within the working directory -->
-					<libPath>lib</libPath>
+					<!-- <libPath>lib</libPath> -->
 
 					<!-- [optional] transitive dependencies filter - if omitted, all transitive dependencies are included -->
 					<!-- <dependencies> Note that only groupId and artifactId must be specified here. because of a limitation of the Include/ExcludesArtifactFilter <includes> <include>org.jrebirth:presentation</include> 
 						<include>org.jrebirth:core</include> </includes> excludes> <exclude></exclude> <excludes </dependencies> -->
 
 					<!--resourcesDirectory>${project.basedir}/src/main/jnlp/resources</resourcesDirectory --> <!-- default value -->
+					<codebase>${jrebirth.jnlp.codebase}</codebase>
 
 					<!-- JNLP generation -->
 					<jnlp>
@@ -151,17 +156,17 @@
 						<!-- used to automatically identify the jar containing the main class. -->
 						<!-- this is perhaps going to change -->
 						<mainClass>${jrebirth.main.class}</mainClass>
+						<offlineAllowed>true</offlineAllowed>
 					</jnlp>
-
 
 					<!-- SIGNING -->
 					<!-- defining this will automatically sign the jar and its dependencies, if necessary -->
 					<sign>
 						<keystore>${basedir}/jrebirth.jks</keystore>
-						<keypass>${keypass}</keypass>  <!-- we need to override passwords easily from the command line.  -->
+						<keypass>${keypass}</keypass>  <!-- we need to override passwords easily from the command line. -->
 						<storepass>${storepass}</storepass>
 						<!--storetype>fillme</storetype -->
-						
+
 						<alias>jrebirth</alias>
 
 						<validity>360</validity>
@@ -173,7 +178,7 @@
 						<dnameL>Toulouse</dnameL>
 						<dnameSt>HG</dnameSt>
 						<dnameC>FR</dnameC>
-						
+
 						<verify>true</verify> <!-- verify that the signing operation succeeded -->
 
 						<!-- KEYSTORE MANAGEMENT -->
@@ -186,12 +191,11 @@
 					</sign>
 
 					<!-- BUILDING PROCESS -->
-
 					<pack200>true</pack200>
 					<gzip>true</gzip> <!-- default force when pack200 false, true when pack200 selected ?? -->
 
 					<!-- causes a version attribute to be output in each jar resource element, optional, default is false -->
-					<outputJarVersions>true</outputJarVersions>
+					<outputJarVersions>false</outputJarVersions>
 
 					<!--install>false</install --> <!-- not yet supported -->
 					<verbose>true</verbose>
@@ -217,14 +221,8 @@
 
 		<dependency>
 			<groupId>org.jrebirth</groupId>
-			<artifactId>core</artifactId>
-			<version>0.7.0-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jrebirth</groupId>
 			<artifactId>presentation</artifactId>
-			<version>0.7.0-SNAPSHOT</version>
+			<version>0.7.0</version>
 		</dependency>
 
 		<dependency>
@@ -235,9 +233,7 @@
 
 	</dependencies>
 
-
 	<distributionManagement>
-
 		<repository>
 			<id>JRebirth-Release</id>
 			<name>JRebirth Releases Repository</name>
@@ -258,11 +254,5 @@
 		</site>
 
 	</distributionManagement>
-
-	<!-- <repositories> <repository> <snapshots> <enabled>false</enabled> </snapshots> <id>releases</id> <name>libs-release</name> <url>http://repo.jrebirth.org/libs-release</url> 
-		</repository> <repository> <snapshots /> <id>snapshots</id> <name>libs-snapshot</name> <url>http://repo.jrebirth.org/libs-snapshot</url> </repository> </repositories> 
-		<pluginRepositories> <pluginRepository> <snapshots> <enabled>false</enabled> </snapshots> <id>central</id> <name>plugins-release</name> <url>http://repo.jrebirth.org/plugins-release</url> 
-		</pluginRepository> <pluginRepository> <snapshots /> <id>snapshots</id> <name>plugins-snapshot</name> <url>http://repo.jrebirth.org/plugins-snapshot</url> </pluginRepository> 
-		</pluginRepositories> -->
 
 </project>
