@@ -5,7 +5,7 @@
 	<version>1.0.0</version>
 
 	<name>JavaFX 2.2 Lightning Talk</name>
-	<url>http://www.jrebirth.org/lightningtalk</url>
+	<url>http://www.jrebirth.org/lightningtalk_files</url>
 	<description>Interactive Short Presentation of JavaFX 2.2 capabilities</description>
 
 	<properties>
