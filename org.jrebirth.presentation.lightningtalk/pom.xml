@@ -14,7 +14,7 @@
 
 		<deployUrl>http://apps.rebirth.org</deployUrl>
 		<deployPath>${project.artifactId}/${project.version}</deployPath>
-		
+
 		<jnlpFilename>LightningTalk.jnlp</jnlpFilename>
 		<appClass>org.jrebirth.presentation.lightningtalk.LightningTalk</appClass>
 
@@ -103,10 +103,10 @@
 							<implementation-vendor>seb</implementation-vendor>
 							<implementation-title>Prez</implementation-title>
 							<implementation-version>1.0</implementation-version>
-							<JavaFX-Class-Path>jaxb-api-2.2.1.jar 
-				stax-api-1.0-2.jar activation-1.1.jar jaxb-impl-2.2.1.jar presentation-0.7.1-SNAPSHOT.jar core-0.7.1-SNAPSHOT.jar logback-classic-1.0.6.jar logback-core-1.0.6.jar 
-				slf4j-api-1.6.5.jar</JavaFX-Class-Path>
-				
+							<JavaFX-Class-Path>jaxb-api-2.2.1.jar
+								stax-api-1.0-2.jar activation-1.1.jar jaxb-impl-2.2.1.jar presentation-0.7.1-SNAPSHOT.jar core-0.7.1-SNAPSHOT.jar logback-classic-1.0.6.jar logback-core-1.0.6.jar
+								slf4j-api-1.6.5.jar</JavaFX-Class-Path>
+
 						</manifestEntries>
 						<manifest>
 							<addClasspath>true</addClasspath>
@@ -186,6 +186,13 @@
 			</plugin>
 		</plugins>
 
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
 	</build>
 
 	<dependencies>
