@@ -12,7 +12,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<deployUrl>http://apps.rebirth.org</deployUrl>
+		<deployUrl>http://apps.jrebirth.org</deployUrl>
 		<deployPath>${project.artifactId}/${project.version}</deployPath>
 
 		<jnlpFilename>LightningTalk.jnlp</jnlpFilename>
