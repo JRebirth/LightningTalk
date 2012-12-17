@@ -1,4 +1,3 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jrebirth.presentation</groupId>
@@ -104,7 +103,8 @@
 							<implementation-title>Prez</implementation-title>
 							<implementation-version>1.0</implementation-version>
 							<JavaFX-Class-Path>jaxb-api-2.2.1.jar
-								stax-api-1.0-2.jar activation-1.1.jar jaxb-impl-2.2.1.jar presentation-0.7.1-SNAPSHOT.jar core-0.7.1-SNAPSHOT.jar logback-classic-1.0.6.jar logback-core-1.0.6.jar
+								stax-api-1.0-2.jar activation-1.1.jar jaxb-impl-2.2.1.jar presentation-0.7.1-SNAPSHOT.jar core-0.7.1-SNAPSHOT.jar
+								logback-classic-1.0.6.jar logback-core-1.0.6.jar
 								slf4j-api-1.6.5.jar</JavaFX-Class-Path>
 
 						</manifestEntries>
@@ -211,7 +211,7 @@
 		<dependency>
 			<groupId>org.jrebirth</groupId>
 			<artifactId>presentation</artifactId>
-			<version>0.7.1</version>
+			<version>0.7.2-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
