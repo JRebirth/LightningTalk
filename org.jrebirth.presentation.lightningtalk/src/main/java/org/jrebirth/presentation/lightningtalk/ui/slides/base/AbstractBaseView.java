@@ -126,7 +126,7 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
 
     /** The top rectangle. */
     private Rectangle topRectangle;
-    
+
     /** The bottom rectangle. */
     private Rectangle bottomRectangle;
 
@@ -252,7 +252,7 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
      */
     @Override
     public void doStart() {
-
+        doReload();
     }
 
     /**

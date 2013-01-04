@@ -44,9 +44,7 @@ import javafx.util.Callback;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
 
-// TODO: Auto-generated Javadoc
 /**
- * 
  * The class <strong>ControlView</strong>.
  * 
  * The custom controls demo slide.
@@ -57,7 +55,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
 
     /** The pagination. */
     private Pagination pagination;
-    
+
     /** The images. */
     private final Image[] images = new Image[7];
 

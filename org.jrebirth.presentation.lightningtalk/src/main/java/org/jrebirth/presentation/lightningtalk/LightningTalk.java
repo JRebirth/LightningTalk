@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -110,6 +111,10 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
                 }
             }
         });
+
+        scene.getRoot().scaleXProperty().bind(Bindings.divide(getStage().widthProperty(), 1040));
+        scene.getRoot().scaleYProperty().bind(Bindings.divide(getStage().heightProperty(), 800));
+
     }
 
     /**
@@ -117,7 +122,6 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
      */
     @Override
     protected List<FontEnum> getFontToPreload() {
-        // return Collections.
 
         return Arrays.asList(new FontEnum[] {
                 LtFonts.TYPEWRITER,

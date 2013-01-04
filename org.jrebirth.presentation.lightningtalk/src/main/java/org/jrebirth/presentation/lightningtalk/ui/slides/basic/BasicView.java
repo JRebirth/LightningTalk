@@ -123,7 +123,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
 
     /** The top rectangle. */
     private Rectangle topRectangle;
-    
+
     /** The bottom rectangle. */
     private Rectangle bottomRectangle;
 
@@ -249,7 +249,7 @@ public class BasicView extends AbstractSlideView<BasicModel, AnchorPane, BasicCo
      */
     @Override
     public void doStart() {
-
+        doReload();
     }
 
     /**

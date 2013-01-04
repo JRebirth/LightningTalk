@@ -24,9 +24,7 @@ import javafx.scene.layout.StackPane;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
-// TODO: Auto-generated Javadoc
 /**
- * 
  * The class <strong>PlaceView</strong>.
  * 
  * The custom introduction slide.
@@ -64,7 +62,7 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      */
     @Override
     public void doStart() {
-        // this.pane.start();
+        doReload();
     }
 
     /**
@@ -80,8 +78,6 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      */
     @Override
     public void doReload() {
-        // Not used yet !!!!
         this.pane.start();
-
     }
 }

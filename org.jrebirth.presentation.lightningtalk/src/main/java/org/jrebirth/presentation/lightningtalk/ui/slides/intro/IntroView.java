@@ -35,7 +35,6 @@ import javafx.util.Duration;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
-// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>IntroView</strong>.
@@ -124,7 +123,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
      */
     @Override
     public void doStart() {
-        // this.typeWriter.play();
+        doReload();
     }
 
     /**

@@ -24,7 +24,6 @@ import javafx.scene.layout.Pane;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
-// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>PlaceView</strong>.
@@ -68,6 +67,7 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, Pane, PlaceCo
      */
     @Override
     public void doStart() {
+        // Nothing to do yet
     }
 
     /**
@@ -75,6 +75,7 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, Pane, PlaceCo
      */
     @Override
     public void doReload() {
+        // Nothing to do yet
     }
 
     /**
