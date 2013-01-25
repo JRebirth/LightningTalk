@@ -31,7 +31,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import org.jrebirth.core.application.AbstractApplication;
-import org.jrebirth.core.resource.font.FontEnum;
+import org.jrebirth.core.resource.font.FontItem;
 import org.jrebirth.core.ui.Model;
 import org.jrebirth.core.wave.Wave;
 import org.jrebirth.presentation.ui.stack.StackModel;
@@ -121,9 +121,9 @@ public final class LightningTalk extends AbstractApplication<StackPane> {
      * {@inheritDoc}
      */
     @Override
-    protected List<FontEnum> getFontToPreload() {
+    protected List<FontItem> getFontToPreload() {
 
-        return Arrays.asList(new FontEnum[] {
+        return Arrays.asList(new FontItem[] {
                 LtFonts.TYPEWRITER,
                 LtFonts.DOG_SPLASH,
                 LtFonts.WAZAA_SPLASH,

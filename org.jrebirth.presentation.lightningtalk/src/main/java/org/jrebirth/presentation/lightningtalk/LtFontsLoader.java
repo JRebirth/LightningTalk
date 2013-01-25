@@ -19,7 +19,6 @@ package org.jrebirth.presentation.lightningtalk;
 
 import org.jrebirth.core.resource.font.FontName;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>LtFontsLoader</strong>.
  * 
@@ -50,13 +49,5 @@ public enum LtFontsLoader implements FontName {
 
     /** . */
     Neuton_Cursive;
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String get() {
-        return name();
-    }
 
 }
