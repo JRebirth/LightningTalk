@@ -33,49 +33,49 @@ public class Particle {
     // and colouring
     /** The alpha. */
     double alpha;
-    
+
     /** The easing. */
     final double easing;
-    
+
     /** The fade. */
     double fade;
-    
+
     /** The pos x. */
     double posX;
-    
+
     /** The pos y. */
     double posY;
-    
+
     /** The vel x. */
     double velX;
-    
+
     /** The vel y. */
     double velY;
-    
+
     /** The target x. */
     final double targetX;
-    
+
     /** The target y. */
     final double targetY;
-    
+
     /** The color. */
     final Paint color;
-    
+
     /** The size. */
     final int size;
-    
+
     /** The use physics. */
     final boolean usePhysics;
-    
+
     /** The should explode children. */
     final boolean shouldExplodeChildren;
-    
+
     /** The has tail. */
     final boolean hasTail;
-    
+
     /** The last pos x. */
     double lastPosX;
-    
+
     /** The last pos y. */
     double lastPosY;
 

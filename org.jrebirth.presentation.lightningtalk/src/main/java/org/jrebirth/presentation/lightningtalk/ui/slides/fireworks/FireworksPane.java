@@ -44,22 +44,22 @@ public class FireworksPane extends Pane {
 
     /** The timer. */
     private final AnimationTimer timer;
-    
+
     /** The canvas. */
     private final Canvas canvas;
-    
+
     /** The background. */
     private final ImageView background;
-    
+
     /** The opaque background. */
     private final ImageView opaqueBackground;
-    
+
     /** The particles. */
     private final List<Particle> particles = new ArrayList<Particle>();
-    
+
     /** The colors. */
     private final Paint[] colors;
-    
+
     /** The count down till next firework. */
     private int countDownTillNextFirework = 40;
 
