@@ -211,7 +211,7 @@
 		<dependency>
 			<groupId>org.jrebirth</groupId>
 			<artifactId>presentation</artifactId>
-			<version>0.7.2-SNAPSHOT</version>
+			<version>0.7.2</version>
 		</dependency>
 
 		<dependency>
