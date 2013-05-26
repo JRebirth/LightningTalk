@@ -83,7 +83,6 @@ import org.jrebirth.presentation.model.SlideItem;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.ui.base.SlideStep;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>AbstractTemplateView</strong>.
  * 
