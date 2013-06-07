@@ -34,6 +34,7 @@ import org.jrebirth.core.application.AbstractApplication;
 import org.jrebirth.core.resource.font.FontItem;
 import org.jrebirth.core.ui.Model;
 import org.jrebirth.core.wave.Wave;
+import org.jrebirth.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.presentation.ui.stack.StackModel;
 
 /**

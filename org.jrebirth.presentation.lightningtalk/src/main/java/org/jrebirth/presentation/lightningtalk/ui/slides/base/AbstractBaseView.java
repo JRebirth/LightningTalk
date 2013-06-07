@@ -77,7 +77,7 @@ import javafx.util.Duration;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.PrezColors;
 import org.jrebirth.presentation.PrezFonts;
-import org.jrebirth.presentation.lightningtalk.LtFonts;
+import org.jrebirth.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.presentation.model.SlideContent;
 import org.jrebirth.presentation.model.SlideItem;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
@@ -168,7 +168,7 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeComponents() {
+    protected void initView() {
 
         // getRootNode().setPrefSize(1010, 750);
         // getRootNode().setMinSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
@@ -250,15 +250,15 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
      * {@inheritDoc}
      */
     @Override
-    public void doStart() {
-        doReload();
+    public void start() {
+        reload();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public void doHide() {
+    public void hide() {
 
         this.primaryTitle.setTranslateX(3000);
         this.placeLogo.setTranslateX(1200);
@@ -279,7 +279,7 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
      * {@inheritDoc}
      */
     @Override
-    public void doReload() {
+    public void reload() {
 
         // MUST be refactored with property binding
 

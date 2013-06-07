@@ -51,7 +51,7 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeComponents() {
+    protected void initView() {
         this.pane = new FireworksPane(loadImage("images/canvas/MontSaintMichel.jpg"), loadImage("images/canvas/MontSaintMichel.png"));
         StackPane.setAlignment(this.pane, Pos.CENTER);
         getRootNode().getChildren().add(this.pane);
@@ -61,15 +61,15 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      * {@inheritDoc}
      */
     @Override
-    public void doStart() {
-        doReload();
+    public void start() {
+        reload();
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public void doHide() {
+    public void hide() {
         this.pane.stop();
     }
 
@@ -77,7 +77,7 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      * {@inheritDoc}
      */
     @Override
-    public void doReload() {
+    public void reload() {
         this.pane.start();
     }
 }

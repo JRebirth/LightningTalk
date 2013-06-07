@@ -46,8 +46,8 @@ public final class ControlController extends AbstractBaseController<ControlModel
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeEventHandlers() throws CoreException {
-        super.customInitializeEventHandlers();
+    protected void initEventHandlers() throws CoreException {
+        super.initEventHandlers();
 
         getRootNode().addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
 
