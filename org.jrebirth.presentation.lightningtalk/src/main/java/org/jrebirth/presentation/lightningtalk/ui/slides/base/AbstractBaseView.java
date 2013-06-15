@@ -75,11 +75,11 @@ import javafx.scene.web.WebViewBuilder;
 import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.PrezColors;
-import org.jrebirth.presentation.PrezFonts;
 import org.jrebirth.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.presentation.model.SlideContent;
 import org.jrebirth.presentation.model.SlideItem;
+import org.jrebirth.presentation.resource.PrezColors;
+import org.jrebirth.presentation.resource.PrezFonts;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.ui.base.SlideStep;
 
