@@ -22,6 +22,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.presentation.lightningtalk.resources.LtImages;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
@@ -52,7 +53,7 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
      */
     @Override
     protected void initView() {
-        this.pane = new FireworksPane(loadImage("images/canvas/MontSaintMichel.jpg"), loadImage("images/canvas/MontSaintMichel.png"));
+        this.pane = new FireworksPane(LtImages.FIREWORKS_ART.get(), LtImages.FIREWORKS_MASK.get());
         StackPane.setAlignment(this.pane, Pos.CENTER);
         getRootNode().getChildren().add(this.pane);
     }

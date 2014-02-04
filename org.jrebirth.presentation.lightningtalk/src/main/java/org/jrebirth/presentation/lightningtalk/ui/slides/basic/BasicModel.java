@@ -41,7 +41,7 @@ public class BasicModel extends AbstractSlideModel<BasicModel, BasicView, SlideS
      */
     @Override
     public void showSlideStep(final SlideStep slideStep) {
-
+        getView().showSlideStep(slideStep);
     }
 
     /**

@@ -42,6 +42,9 @@ import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.core.resource.Resources;
+import org.jrebirth.core.resource.image.ImageExtension;
+import org.jrebirth.core.resource.image.LocalImage;
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
 
 /**
@@ -178,7 +181,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         outerBox.setAlignment(Pos.CENTER);
         // Images for our pages
         for (int i = 0; i < 7; i++) {
-            this.images[i] = loadImage("images/pictures/picture " + (i + 1) + ".png");
+            this.images[i] = Resources.create(new LocalImage("pictures", "picture" + (i + 1), ImageExtension.PNG)).get();
         }
 
         this.pagination = PaginationBuilder.create()
@@ -195,6 +198,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         final Button styleButton = ButtonBuilder.create()
                 .text("Toggle pagination style")
                 .onAction(new EventHandler<ActionEvent>() {
+                    @Override
                     public void handle(final ActionEvent me) {
                         if (!ControlView.this.pagination.getStyleClass().contains(Pagination.STYLE_CLASS_BULLET)) {
                             ControlView.this.pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
