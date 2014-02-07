@@ -68,7 +68,7 @@
 				<item></item>
 				<item>Powered by JRebirth JavaFX Framework</item>
 				<item link="true">www.jrebirth.org</item>
-				<item image="images/me/JRebirth_128x128.png"></item>
+				<item image="me/JRebirth_128x128.png"></item>
 			</content>
 		</slide>
 
@@ -122,7 +122,7 @@
 
 		<slide showAnimation="FadeIn" hideAnimation="MoveToBottom">
 			<title>Event Handlers</title>
-			<content>
+			<content name="Text">
 				<item>Multi-Touch &amp; Gesture</item>
 				<item>Rotate</item>
 				<item level="1">ROTATION_STARTED, ROTATE, ROTATION_FINISHED</item>
@@ -149,19 +149,21 @@
 
 		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.control.ControlModel" showAnimation="MoveFromTop" hideAnimation="MoveToLeft">
 			<title>New controls</title>
-			<content>
+			<content name="Text">
 				<item>JFXtras 2</item>
 				<item link="true">jfxtras.org</item>
 				<item>Lot of control improvements</item>
 				<item>JavaFX UI controls sandbox</item>
 				<item link="true">hg.openjdk.java.net/openjfx/sandbox-8/controls/rt</item>
 			</content>
+			<content name="ColorPicker"/>
+			<content name="Pagination"/>
 		</slide>
 
 
 		<slide showAnimation="MoveFromRight" hideAnimation="MoveToTop">
 			<title>Media</title>
-			<content>
+			<content name="Text">
 				<item>WebView enhanced</item>
 				<item>Read &amp; Write pixels</item>
 				<item>Enhanced font rendering on LCD displays</item>
@@ -240,7 +242,7 @@
 
 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="ScaleFromMax" hideAnimation="FadeOut">
 			<content>
-				<item image="images/splash/Merci.png" />
+				<item image="splash/Merci.png" />
 			</content>
 		</slide>
 
@@ -249,7 +251,7 @@
 
 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 			<content>
-				<item image="images/splash/Q_and_R.png" />
+				<item image="splash/Q_and_R.png" />
 			</content>
 		</slide>
 

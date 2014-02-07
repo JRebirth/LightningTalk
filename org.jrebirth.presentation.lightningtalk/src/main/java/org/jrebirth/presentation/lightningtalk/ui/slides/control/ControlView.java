@@ -181,7 +181,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         outerBox.setAlignment(Pos.CENTER);
         // Images for our pages
         for (int i = 0; i < 7; i++) {
-            this.images[i] = Resources.create(new LocalImage("pictures", "picture" + (i + 1), ImageExtension.PNG)).get();
+            this.images[i] = Resources.create(new LocalImage("pictures", "picture " + (i + 1), ImageExtension.PNG)).get();
         }
 
         this.pagination = PaginationBuilder.create()

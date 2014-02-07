@@ -19,7 +19,6 @@ package org.jrebirth.presentation.lightningtalk.ui.slides.control;
 
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>ControlModel</strong>.
  * 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<jnlp spec="$jnlpspec" xmlns:jfx="http://javafx.com" codebase="$jnlpCodebase" href="$outputFile">
-  <information>
+<jnlp spec="1.0+" xmlns:jfx="http://javafx.com" codebase="$jnlpCodebase" href="$outputFile" >
+
+	<information>
 #if($project.Name)
     <title>$project.Name</title>
 #end
@@ -20,7 +21,7 @@
 #if($offlineAllowed)
     <offline-allowed/>
 #end
-  </information>
+	</information>
 
 #if($allPermissions)
   <security>
@@ -34,16 +35,16 @@
 	<resources os="Windows" arch="x64">
 		<jfx:javafx-runtime version="2.0+" href="http://download.oracle.com/otn-pub/java/javafx/javafx-windows-x64__Vlatest.exe "/>
 	</resources>
-	
-	<resources>
-    	<j2se version="1.7+"/>
-     		$dependencies
+  
+  	<resources>
+		<j2se version="1.7+" />
+		$dependencies
 	</resources>
+	
 	<application-desc main-class="$mainClass"/>
 	
 	<applet-desc  width="$appletWidth" height="$appletHeight" main-class="com.javafx.main.NoJavaFXFallback"  name="${project.name}" />
-	<jfx:javafx-desc  width="$appletWidth" height="$appletHeight" main-class="$mainClass" name="${project.name}" />
-	
+	<jfx:javafx-desc  width="$appletWidth" height="$appletHeight" preloader-class="$preloaderClass" main-class="$mainClass" name="${project.name}" />
 <!--
 
 	update element: The update element is used to indicate the preferences for how application updates should be handled by the JNLP Client. The update element can contain the following two optional attributes:
