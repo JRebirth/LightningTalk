@@ -19,11 +19,11 @@ package org.jrebirth.presentation.lightningtalk.resources;
 
 import javafx.scene.text.Font;
 
-import org.jrebirth.core.resource.ResourceBuilders;
-import org.jrebirth.core.resource.font.FontBuilder;
-import org.jrebirth.core.resource.font.FontItem;
-import org.jrebirth.core.resource.font.FontParams;
-import org.jrebirth.core.resource.font.RealFont;
+import org.jrebirth.af.core.resource.ResourceBuilders;
+import org.jrebirth.af.core.resource.font.FontBuilder;
+import org.jrebirth.af.core.resource.font.FontItem;
+import org.jrebirth.af.core.resource.font.FontParams;
+import org.jrebirth.af.core.resource.font.RealFont;
 
 // TODO: Auto-generated Javadoc
 /**

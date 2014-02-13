@@ -19,13 +19,12 @@ package org.jrebirth.presentation.lightningtalk.resources;
 
 import javafx.scene.paint.Color;
 
-import org.jrebirth.core.resource.ResourceBuilders;
-import org.jrebirth.core.resource.color.ColorBuilder;
-import org.jrebirth.core.resource.color.ColorItem;
-import org.jrebirth.core.resource.color.ColorParams;
-import org.jrebirth.core.resource.color.WebColor;
+import org.jrebirth.af.core.resource.ResourceBuilders;
+import org.jrebirth.af.core.resource.color.ColorBuilder;
+import org.jrebirth.af.core.resource.color.ColorItem;
+import org.jrebirth.af.core.resource.color.ColorParams;
+import org.jrebirth.af.core.resource.color.WebColor;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>LtColors</strong>.
  * 

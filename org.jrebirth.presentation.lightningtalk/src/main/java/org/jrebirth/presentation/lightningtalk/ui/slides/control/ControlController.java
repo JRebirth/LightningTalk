@@ -20,7 +20,7 @@ package org.jrebirth.presentation.lightningtalk.ui.slides.control;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
-import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.af.core.exception.CoreException;
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseController;
 
 // TODO: Auto-generated Javadoc

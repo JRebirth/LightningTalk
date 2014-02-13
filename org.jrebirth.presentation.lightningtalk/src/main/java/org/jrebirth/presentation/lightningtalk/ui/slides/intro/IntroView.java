@@ -32,8 +32,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.ui.base.AbstractSlideView;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
 
 /**
  * 

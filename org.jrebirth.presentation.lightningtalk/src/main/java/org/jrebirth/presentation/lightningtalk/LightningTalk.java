@@ -28,11 +28,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import org.jrebirth.core.application.DefaultApplication;
-import org.jrebirth.core.resource.font.FontItem;
-import org.jrebirth.core.ui.Model;
+import org.jrebirth.af.core.application.DefaultApplication;
+import org.jrebirth.af.core.resource.font.FontItem;
+import org.jrebirth.af.core.ui.Model;
+import org.jrebirth.af.presentation.ui.stack.StackModel;
 import org.jrebirth.presentation.lightningtalk.resources.LtFonts;
-import org.jrebirth.presentation.ui.stack.StackModel;
 
 /**
  * The class <strong>LightningTalk</strong>.

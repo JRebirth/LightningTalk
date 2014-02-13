@@ -74,17 +74,17 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebViewBuilder;
 import javafx.util.Duration;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.core.resource.Resources;
-import org.jrebirth.core.resource.image.LocalImage;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.core.resource.Resources;
+import org.jrebirth.af.core.resource.image.LocalImage;
+import org.jrebirth.af.presentation.resources.PrezColors;
+import org.jrebirth.af.presentation.resources.PrezFonts;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
+import org.jrebirth.af.presentation.ui.base.SlideStep;
 import org.jrebirth.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.presentation.lightningtalk.resources.LtImages;
 import org.jrebirth.presentation.model.SlideContent;
 import org.jrebirth.presentation.model.SlideItem;
-import org.jrebirth.presentation.resources.PrezColors;
-import org.jrebirth.presentation.resources.PrezFonts;
-import org.jrebirth.presentation.ui.base.AbstractSlideView;
-import org.jrebirth.presentation.ui.base.SlideStep;
 
 /**
  * The class <strong>AbstractTemplateView</strong>.

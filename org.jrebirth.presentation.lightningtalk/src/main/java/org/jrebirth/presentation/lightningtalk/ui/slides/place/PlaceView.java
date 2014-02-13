@@ -21,9 +21,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.Pane;
 
-import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.lightningtalk.resources.LtImages;
-import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
  * 

@@ -41,10 +41,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.core.resource.Resources;
-import org.jrebirth.core.resource.image.ImageExtension;
-import org.jrebirth.core.resource.image.LocalImage;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.core.resource.Resources;
+import org.jrebirth.af.core.resource.image.ImageExtension;
+import org.jrebirth.af.core.resource.image.LocalImage;
 import org.jrebirth.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
 
 /**

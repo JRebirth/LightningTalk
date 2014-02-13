@@ -21,9 +21,9 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
-import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.lightningtalk.resources.LtImages;
-import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
  * The class <strong>PlaceView</strong>.
