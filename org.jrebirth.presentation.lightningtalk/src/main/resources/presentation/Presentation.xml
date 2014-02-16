@@ -10,13 +10,13 @@
 		<speaker firstName="Sébastien" lastName="Bordes" email="contact@jrebirth.org" job="JRebirth" />
 	</speakers>
 
-	<slides defaultModelClass="org.jrebirth.presentation.lightningtalk.ui.slides.basic.BasicModel">
+	<slides defaultModelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.basic.BasicModel">
 
-		<slide style="place" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
+		<slide style="place" modelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.place.PlaceModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 		</slide>
 
 		<!-- Presentation Title -->
-		<slide style="intro" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
+		<slide style="intro" modelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="MoveToLeft">
 			<title> JavaFX 2.2\n\t What's Up ?</title>
 		</slide>
 
@@ -54,7 +54,7 @@
 			</content>
 		</slide>
 
-		<slide style="dogfooding" modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="FadeOut">
+		<slide style="dogfooding" modelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.intro.IntroModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 			<title>DogFooding.Mode = On</title>
 		</slide>
 
@@ -72,7 +72,7 @@
 			</content>
 		</slide>
 
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" showAnimation="FadeIn" hideAnimation="ScaleToMin">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" showAnimation="FadeIn" hideAnimation="ScaleToMin">
 			<title>So\n What's up ???</title>
 		</slide>
 
@@ -135,7 +135,7 @@
 			</content>
 		</slide>
 
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="kiosk" showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" style="kiosk" showAnimation="MoveFromTop" hideAnimation="MoveToBottom">
 		</slide>
 
 		<!-- Multi-touch support for touch-enabled devices. As of today this is mostly relevant for desktop-class touch screen displays and touch pads, this will enable 
@@ -147,7 +147,7 @@
 			also be welcome by developers with other backgrounds, such as AWT or SVG. You can run a demo of the “Fireworks” canvas demo under the section “NEW!” of the Ensemble 
 			sample application, or you can watch the making of another Canvas example on this video. -->
 
-		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.control.ControlModel" showAnimation="MoveFromTop" hideAnimation="MoveToLeft">
+		<slide modelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.control.ControlModel" showAnimation="MoveFromTop" hideAnimation="MoveToLeft">
 			<title>New controls</title>
 			<content name="Text">
 				<item>JFXtras 2</item>
@@ -187,7 +187,7 @@
 			</content>
 		</slide>
 
-		<slide modelClass="org.jrebirth.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="ScaleFromMax" hideAnimation="ScaleToMax">
+		<slide modelClass="org.jrebirth.af.presentation.lightningtalk.ui.slides.fireworks.FireworksModel" showAnimation="ScaleFromMax" hideAnimation="ScaleToMax">
 		</slide>
 
 		<!-- JavaFX 2.2 introduces the ability to read and write pixels to and from JavaFX image objects. An example is available as “Image Operator” in the “NEW!” section 
@@ -240,16 +240,16 @@
 			and more than 100% in JFXPanel-GUIMark2.Vector more than 30% in Layout up to 20% in WebNode.Guimark2-Text -->
 
 
-		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="ScaleFromMax" hideAnimation="FadeOut">
+		<slide modelClass="org.jrebirth.af.presentation.ui.image.ImageSlideModel" showAnimation="ScaleFromMax" hideAnimation="FadeOut">
 			<content>
 				<item image="splash/Merci.png" />
 			</content>
 		</slide>
 
 		<!-- Des Questions -->
-		<!-- <slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel"> <title>Avez-vous des\nquestions ?</title> </slide> -->
+		<!-- <slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel"> <title>Avez-vous des\nquestions ?</title> </slide> -->
 
-		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="FadeOut">
+		<slide modelClass="org.jrebirth.af.presentation.ui.image.ImageSlideModel" showAnimation="FadeIn" hideAnimation="FadeOut">
 			<content>
 				<item image="splash/Q_and_R.png" />
 			</content>

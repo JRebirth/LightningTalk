@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 	</parent>
 	
-	<groupId>org.jrebirth.presentation</groupId>
+	<groupId>org.jrebirth.af.presentation</groupId>
 	<artifactId>lightningtalk</artifactId>
 	<version>1.1.0</version>
 
@@ -22,7 +22,7 @@
 		<deployPath>${project.artifactId}/${project.version}</deployPath>
 
 		<jnlpFilename>LightningTalk.jnlp</jnlpFilename>
-		<appClass>org.jrebirth.presentation.lightningtalk.LightningTalk</appClass>
+		<appClass>org.jrebirth.af.presentation.lightningtalk.LightningTalk</appClass>
 
 		<appletWidth>1024</appletWidth>
 		<appletHeight>768</appletHeight>

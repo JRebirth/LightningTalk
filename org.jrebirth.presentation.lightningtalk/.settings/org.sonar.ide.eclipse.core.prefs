@@ -2,6 +2,6 @@ analyseLocally=false
 eclipse.preferences.version=1
 extraProperties=
 lastAnalysisDate=1373585230000
-projectKey=org.jrebirth.presentation\:lightningtalk
+projectKey=org.jrebirth.af.presentation\:lightningtalk
 serverUrl=http\://quality.jrebirth.org
 version=2
