@@ -32,7 +32,7 @@ import org.jrebirth.af.core.application.DefaultApplication;
 import org.jrebirth.af.core.resource.font.FontItem;
 import org.jrebirth.af.core.ui.Model;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtFonts;
-import org.jrebirth.af.presentation.ui.stack.StackModel;
+import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
 /**
  * The class <strong>LightningTalk</strong>.
@@ -58,7 +58,7 @@ public final class LightningTalk extends DefaultApplication<StackPane> {
     // @Override
     @Override
     public Class<? extends Model> getFirstModelClass() {
-        return StackModel.class;
+        return SlideStackModel.class;
     }
 
     /**
