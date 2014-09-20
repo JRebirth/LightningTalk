@@ -76,7 +76,7 @@ import javafx.util.Duration;
 
 import org.jrebirth.af.core.exception.CoreException;
 import org.jrebirth.af.core.resource.Resources;
-import org.jrebirth.af.core.resource.image.LocalImage;
+import org.jrebirth.af.core.resource.image.RelImage;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtImages;
 import org.jrebirth.af.presentation.resources.PrezColors;
@@ -728,7 +728,7 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
 
         } else if (item.getImage() != null) {
 
-            final Image image = Resources.create(new LocalImage(item.getImage())).get();
+            final Image image = Resources.create(new RelImage(item.getImage())).get();
             final ImageView imageViewer = ImageViewBuilder.create()
                     .styleClass(ITEM_CLASS_PREFIX + item.getLevel())
                     .image(image)

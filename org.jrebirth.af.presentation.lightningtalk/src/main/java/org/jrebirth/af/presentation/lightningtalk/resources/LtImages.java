@@ -17,11 +17,11 @@
  */
 package org.jrebirth.af.presentation.lightningtalk.resources;
 
+import static org.jrebirth.af.core.resource.Resources.create;
+
 import org.jrebirth.af.core.resource.image.ImageExtension;
 import org.jrebirth.af.core.resource.image.ImageItem;
-import org.jrebirth.af.core.resource.image.LocalImage;
-
-import static org.jrebirth.af.core.resource.Resources.create;
+import org.jrebirth.af.core.resource.image.RelImage;
 
 /**
  * The JpImages interface providing all images.
@@ -29,15 +29,15 @@ import static org.jrebirth.af.core.resource.Resources.create;
 public interface LtImages {
 
     /** The background image used by place slide. */
-    ImageItem PLACE_BG = create(new LocalImage("intro", "ToulouseJug", ImageExtension.JPG));
+    ImageItem PLACE_BG = create(new RelImage("intro", "ToulouseJug", ImageExtension.JPG));
 
     /** The place logo displayed into each slide. */
-    ImageItem PLACE_LOGO = create(new LocalImage("PlaceLogo", ImageExtension.PNG));
+    ImageItem PLACE_LOGO = create(new RelImage("PlaceLogo", ImageExtension.PNG));
 
     /** . */
-    ImageItem FIREWORKS_ART = create(new LocalImage("canvas", "MontSaintMichel", ImageExtension.JPG));
+    ImageItem FIREWORKS_ART = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.JPG));
 
     /** . */
-    ImageItem FIREWORKS_MASK = create(new LocalImage("canvas", "MontSaintMichel", ImageExtension.PNG));
+    ImageItem FIREWORKS_MASK = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.PNG));
 
 }
