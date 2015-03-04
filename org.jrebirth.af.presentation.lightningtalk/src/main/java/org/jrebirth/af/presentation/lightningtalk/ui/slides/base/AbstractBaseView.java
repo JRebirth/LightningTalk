@@ -74,7 +74,7 @@ import javafx.scene.web.WebView;
 import javafx.scene.web.WebViewBuilder;
 import javafx.util.Duration;
 
-import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.api.exception.CoreException;
 import org.jrebirth.af.core.resource.Resources;
 import org.jrebirth.af.core.resource.image.RelImage;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtFonts;
@@ -305,114 +305,114 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
 
         ParallelTransitionBuilder.create().children(
 
-                // ParallelTransitionBuilder.create().children(
-                ScaleTransitionBuilder
-                        .create()
-                        .node(this.smallPokemon)
-                        .duration(Duration.millis(400))
-                        .fromX(0)
-                        .fromY(0)
-                        .toX(1)
-                        .toY(1)
-                        .build(),
-                RotateTransitionBuilder.create()
-                        .node(this.smallPokemon)
-                        .duration(Duration.millis(800))
-                        .fromAngle(1080)
-                        .toAngle(-135)
-                        .build(),
-                ScaleTransitionBuilder
-                        .create()
-                        .node(this.bigPokemon)
-                        .delay(Duration.millis(200))
-                        .duration(Duration.millis(400))
-                        .fromX(0)
-                        .fromY(0)
-                        .toX(1.2)
-                        .toY(1.2)
-                        .build(),
-                RotateTransitionBuilder.create()
-                        .node(this.bigPokemon)
-                        .delay(Duration.millis(200))
-                        .duration(Duration.millis(800))
-                        .fromAngle(0)
-                        .toAngle(1080)
-                        .build(),
+                                                    // ParallelTransitionBuilder.create().children(
+                                                    ScaleTransitionBuilder
+                                                                          .create()
+                                                                          .node(this.smallPokemon)
+                                                                          .duration(Duration.millis(400))
+                                                                          .fromX(0)
+                                                                          .fromY(0)
+                                                                          .toX(1)
+                                                                          .toY(1)
+                                                                          .build(),
+                                                    RotateTransitionBuilder.create()
+                                                                           .node(this.smallPokemon)
+                                                                           .duration(Duration.millis(800))
+                                                                           .fromAngle(1080)
+                                                                           .toAngle(-135)
+                                                                           .build(),
+                                                    ScaleTransitionBuilder
+                                                                          .create()
+                                                                          .node(this.bigPokemon)
+                                                                          .delay(Duration.millis(200))
+                                                                          .duration(Duration.millis(400))
+                                                                          .fromX(0)
+                                                                          .fromY(0)
+                                                                          .toX(1.2)
+                                                                          .toY(1.2)
+                                                                          .build(),
+                                                    RotateTransitionBuilder.create()
+                                                                           .node(this.bigPokemon)
+                                                                           .delay(Duration.millis(200))
+                                                                           .duration(Duration.millis(800))
+                                                                           .fromAngle(0)
+                                                                           .toAngle(1080)
+                                                                           .build(),
 
-                TimelineBuilder.create()
-                        .delay(Duration.millis(200))
-                        .keyFrames(
-                                new KeyFrame(Duration.millis(0), new KeyValue(this.topRectangle.widthProperty(), 0)),
-                                new KeyFrame(Duration.millis(600), new KeyValue(this.topRectangle.widthProperty(), 300))
-                        )
-                        .build(),
+                                                    TimelineBuilder.create()
+                                                                   .delay(Duration.millis(200))
+                                                                   .keyFrames(
+                                                                              new KeyFrame(Duration.millis(0), new KeyValue(this.topRectangle.widthProperty(), 0)),
+                                                                              new KeyFrame(Duration.millis(600), new KeyValue(this.topRectangle.widthProperty(), 300))
+                                                                   )
+                                                                   .build(),
 
-                TimelineBuilder.create()
-                        .delay(Duration.millis(1200))
-                        .keyFrames(
-                                new KeyFrame(Duration.millis(0),
-                                        new KeyValue(this.bottomRectangle.widthProperty(), 0),
-                                        new KeyValue(this.bottomRectangle.xProperty(), 1000)
-                                ),
-                                new KeyFrame(Duration.millis(300),
-                                        new KeyValue(this.bottomRectangle.widthProperty(), 300),
-                                        new KeyValue(this.bottomRectangle.xProperty(), 700)
-                                )
-                        )
-                        .build(),
-                TranslateTransitionBuilder.create()
-                        .node(this.placeLogo)
-                        .delay(Duration.millis(1200))
-                        .duration(Duration.millis(300))
-                        .toX(-400)
-                        .build(),
+                                                    TimelineBuilder.create()
+                                                                   .delay(Duration.millis(1200))
+                                                                   .keyFrames(
+                                                                              new KeyFrame(Duration.millis(0),
+                                                                                           new KeyValue(this.bottomRectangle.widthProperty(), 0),
+                                                                                           new KeyValue(this.bottomRectangle.xProperty(), 1000)
+                                                                              ),
+                                                                              new KeyFrame(Duration.millis(300),
+                                                                                           new KeyValue(this.bottomRectangle.widthProperty(), 300),
+                                                                                           new KeyValue(this.bottomRectangle.xProperty(), 700)
+                                                                              )
+                                                                   )
+                                                                   .build(),
+                                                    TranslateTransitionBuilder.create()
+                                                                              .node(this.placeLogo)
+                                                                              .delay(Duration.millis(1200))
+                                                                              .duration(Duration.millis(300))
+                                                                              .toX(-400)
+                                                                              .build(),
 
-                TranslateTransitionBuilder.create()
-                        .node(this.primaryTitle)
-                        .delay(Duration.millis(200))
-                        .duration(Duration.millis(400))
-                        .toX(-3000 + 130)
-                        .build(),
-                TimelineBuilder.create()
-                        .keyFrames(
-                                new KeyFrame(Duration.millis(0), new KeyValue(mb.radiusProperty(), 0)),
-                                new KeyFrame(Duration.millis(100), new KeyValue(mb.radiusProperty(), 50)),
-                                new KeyFrame(Duration.millis(200), new KeyValue(mb.radiusProperty(), 63)),
-                                new KeyFrame(Duration.millis(300), new KeyValue(mb.radiusProperty(), 50)),
-                                new KeyFrame(Duration.millis(400), new KeyValue(mb.radiusProperty(), 0))
-                        )
-                        .build(),
-                // ).build()
-                ParallelTransitionBuilder
-                        .create()
-                        .delay(Duration.millis(600))
-                        .children(
-                                // RotateTransitionBuilder
-                                // .create()
-                                // .duration(Duration.millis(600))
-                                // .fromAngle(-180)
-                                // .toAngle(0)
-                                // .build(),
-                                TranslateTransitionBuilder.create()
-                                        .duration(Duration.millis(600))
-                                        .fromX(1024 / 2)
-                                        .fromY(768 / 2)
-                                        .toX(0)
-                                        .toY(0)
-                                        .build(),
-                                ScaleTransitionBuilder
-                                        .create()
-                                        .duration(Duration.millis(600))
-                                        .fromX(0)
-                                        .fromY(0)
-                                        .toX(1)
-                                        .toY(1)
-                                        .build()
-                        )
-                        .node(this.slideContent)
-                        .build()
-                )
-                .build().play();
+                                                    TranslateTransitionBuilder.create()
+                                                                              .node(this.primaryTitle)
+                                                                              .delay(Duration.millis(200))
+                                                                              .duration(Duration.millis(400))
+                                                                              .toX(-3000 + 130)
+                                                                              .build(),
+                                                    TimelineBuilder.create()
+                                                                   .keyFrames(
+                                                                              new KeyFrame(Duration.millis(0), new KeyValue(mb.radiusProperty(), 0)),
+                                                                              new KeyFrame(Duration.millis(100), new KeyValue(mb.radiusProperty(), 50)),
+                                                                              new KeyFrame(Duration.millis(200), new KeyValue(mb.radiusProperty(), 63)),
+                                                                              new KeyFrame(Duration.millis(300), new KeyValue(mb.radiusProperty(), 50)),
+                                                                              new KeyFrame(Duration.millis(400), new KeyValue(mb.radiusProperty(), 0))
+                                                                   )
+                                                                   .build(),
+                                                    // ).build()
+                                                    ParallelTransitionBuilder
+                                                                             .create()
+                                                                             .delay(Duration.millis(600))
+                                                                             .children(
+                                                                                       // RotateTransitionBuilder
+                                                                                       // .create()
+                                                                                       // .duration(Duration.millis(600))
+                                                                                       // .fromAngle(-180)
+                                                                                       // .toAngle(0)
+                                                                                       // .build(),
+                                                                                       TranslateTransitionBuilder.create()
+                                                                                                                 .duration(Duration.millis(600))
+                                                                                                                 .fromX(1024 / 2)
+                                                                                                                 .fromY(768 / 2)
+                                                                                                                 .toX(0)
+                                                                                                                 .toY(0)
+                                                                                                                 .build(),
+                                                                                       ScaleTransitionBuilder
+                                                                                                             .create()
+                                                                                                             .duration(Duration.millis(600))
+                                                                                                             .fromX(0)
+                                                                                                             .fromY(0)
+                                                                                                             .toX(1)
+                                                                                                             .toY(1)
+                                                                                                             .build()
+                                                                             )
+                                                                             .node(this.slideContent)
+                                                                             .build()
+                                 )
+                                 .build().play();
     }
 
     /**
@@ -423,83 +423,83 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
     protected Node getHeaderPanel() {
 
         final Pane headerPane = PaneBuilder.create()
-                .styleClass("header")
-                .layoutX(0.0)
-                .layoutY(0.0)
-                .minWidth(1024)
-                .prefWidth(1024)
-                .build();
+                                           .styleClass("header")
+                                           .layoutX(0.0)
+                                           .layoutY(0.0)
+                                           .minWidth(1024)
+                                           .prefWidth(1024)
+                                           .build();
 
         this.primaryTitle = LabelBuilder.create()
-                // .styleClass("slideTitle")
-                .font(LtFonts.SLIDE_TITLE.get())
-                .textFill(PrezColors.SLIDE_TITLE.get())
-                .text(getModel().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
-                .layoutX(3000) // 40
-                .layoutY(45)
-                // .style("-fx-background-color:#CCCB20")
-                .build();
+                                        // .styleClass("slideTitle")
+                                        .font(LtFonts.SLIDE_TITLE.get())
+                                        .textFill(PrezColors.SLIDE_TITLE.get())
+                                        .text(getModel().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
+                                        .layoutX(3000) // 40
+                                        .layoutY(45)
+                                        // .style("-fx-background-color:#CCCB20")
+                                        .build();
 
         this.secondaryTitle = LabelBuilder.create()
-                // .styleClass("slideTitle")
-                .font(PrezFonts.SLIDE_SUB_TITLE.get())
-                .textFill(PrezColors.SLIDE_TITLE.get())
-                // .scaleX(1.5)
-                // .scaleY(1.5)
-                .layoutX(110)
-                .layoutY(80)
-                .minWidth(450)
-                // .style("-fx-background-color:#E53B20")
-                .alignment(Pos.CENTER_RIGHT)
-                .textAlignment(TextAlignment.RIGHT)
-                .build();
+                                          // .styleClass("slideTitle")
+                                          .font(PrezFonts.SLIDE_SUB_TITLE.get())
+                                          .textFill(PrezColors.SLIDE_TITLE.get())
+                                          // .scaleX(1.5)
+                                          // .scaleY(1.5)
+                                          .layoutX(110)
+                                          .layoutY(80)
+                                          .minWidth(450)
+                                          // .style("-fx-background-color:#E53B20")
+                                          .alignment(Pos.CENTER_RIGHT)
+                                          .textAlignment(TextAlignment.RIGHT)
+                                          .build();
 
         this.prezTitle = LabelBuilder.create()
-                // .styleClass("slideTitle")
-                .font(LtFonts.PREZ_TITLE.get())
-                .textFill(Color.LIGHTGRAY)
-                // .scaleX(1.5)
-                // .scaleY(1.5)
-                // .layoutX(545)
-                // .layoutY(711)
-                .layoutX(480)
-                .layoutY(14.0)
-                .minWidth(450)
-                // .style("-fx-background-color:#E53B20")
-                .alignment(Pos.CENTER_RIGHT)
-                .textAlignment(TextAlignment.RIGHT)
-                .build();
+                                     // .styleClass("slideTitle")
+                                     .font(LtFonts.PREZ_TITLE.get())
+                                     .textFill(Color.LIGHTGRAY)
+                                     // .scaleX(1.5)
+                                     // .scaleY(1.5)
+                                     // .layoutX(545)
+                                     // .layoutY(711)
+                                     .layoutX(480)
+                                     .layoutY(14.0)
+                                     .minWidth(450)
+                                     // .style("-fx-background-color:#E53B20")
+                                     .alignment(Pos.CENTER_RIGHT)
+                                     .textAlignment(TextAlignment.RIGHT)
+                                     .build();
 
         this.placeLogo = ImageViewBuilder.create()
-                // .layoutX(680.0)
-                // .layoutY(-14.0)
-                .layoutX(1200)
-                .layoutY(700)
-                // .scaleX(0.6)
-                // .scaleY(0.6)
-                .image(LtImages.PLACE_LOGO.get())
-                .build();
+                                         // .layoutX(680.0)
+                                         // .layoutY(-14.0)
+                                         .layoutX(1200)
+                                         .layoutY(700)
+                                         // .scaleX(0.6)
+                                         // .scaleY(0.6)
+                                         .image(LtImages.PLACE_LOGO.get())
+                                         .build();
 
         final Polyline pl = PolylineBuilder.create()
-                .strokeWidth(3)
-                .stroke(Color.web("F79508"))
-                .points(684.0, 12.0, 946.0, 12.0, 946.0, 107.0)
-                .build();
+                                           .strokeWidth(3)
+                                           .stroke(Color.web("F79508"))
+                                           .points(684.0, 12.0, 946.0, 12.0, 946.0, 107.0)
+                                           .build();
 
         this.topRectangle = RectangleBuilder.create()
-                .layoutX(95.0)
-                .layoutY(95.0)
-                .width(0.0) // 60.0
-                .height(14.0)
-                .fill(Color.web("1C9A9A"))
-                .build();
+                                            .layoutX(95.0)
+                                            .layoutY(95.0)
+                                            .width(0.0) // 60.0
+                                            .height(14.0)
+                                            .fill(Color.web("1C9A9A"))
+                                            .build();
         this.bottomRectangle = RectangleBuilder.create()
-                .layoutX(0)
-                .layoutY(738)
-                .width(0.0) // 60.0
-                .height(14.0)
-                .fill(Color.web("1C9A9A"))
-                .build();
+                                               .layoutX(0)
+                                               .layoutY(738)
+                                               .width(0.0) // 60.0
+                                               .height(14.0)
+                                               .fill(Color.web("1C9A9A"))
+                                               .build();
 
         // this.circle = CircleBuilder.create()
         // .scaleX(0)
@@ -511,55 +511,55 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
         // .build();
         final Effect smallPokemonEffect =
                 InnerShadowBuilder.create()
-                        .offsetX(1)
-                        .offsetY(1)
-                        .color(Color.LIGHTGRAY)
-                        .input(GlowBuilder.create()
-                                .level(0.6)
-                                .build())
-                        .build();
+                                  .offsetX(1)
+                                  .offsetY(1)
+                                  .color(Color.LIGHTGRAY)
+                                  .input(GlowBuilder.create()
+                                                    .level(0.6)
+                                                    .build())
+                                  .build();
 
         final Effect bigPokemonEffect =
                 DropShadowBuilder.create()
-                        .offsetX(2)
-                        .offsetY(2)
-                        .input(GlowBuilder.create()
-                                .level(0.6)
-                                .build())
-                        .build();
+                                 .offsetX(2)
+                                 .offsetY(2)
+                                 .input(GlowBuilder.create()
+                                                   .level(0.6)
+                                                   .build())
+                                 .build();
 
         this.smallPokemon = SVGPathBuilder
-                .create()
-                .scaleX(0)
-                .scaleY(0)
-                .layoutX(40)
-                .layoutY(40)
-                .fill(Color.web("F79508"))
-                .effect(smallPokemonEffect)
-                .content(
-                        "M64.332,33.584l3.166-3.166C65.99,14.311,53.104,1.493,36.916,0l-3.167,3.167L30.582,0 C14.394,1.493,1.507,14.312,0,30.419l3.166,3.166L0,36.751c1.508,16.106,14.395,28.925,30.582,30.418l3.167-3.167l3.168,3.168 c16.188-1.493,29.073-14.313,30.58-30.421L64.332,33.584z M37.387,44.951h-7.275c-5.114,0-9.26-4.146-9.26-9.26v-4.917 c0-5.114,4.146-9.26,9.26-9.26h7.275c5.114,0,9.26,4.146,9.26,9.26v4.917C46.646,40.805,42.501,44.951,37.387,44.951z")
-                .build();
+                                          .create()
+                                          .scaleX(0)
+                                          .scaleY(0)
+                                          .layoutX(40)
+                                          .layoutY(40)
+                                          .fill(Color.web("F79508"))
+                                          .effect(smallPokemonEffect)
+                                          .content(
+                                                   "M64.332,33.584l3.166-3.166C65.99,14.311,53.104,1.493,36.916,0l-3.167,3.167L30.582,0 C14.394,1.493,1.507,14.312,0,30.419l3.166,3.166L0,36.751c1.508,16.106,14.395,28.925,30.582,30.418l3.167-3.167l3.168,3.168 c16.188-1.493,29.073-14.313,30.58-30.421L64.332,33.584z M37.387,44.951h-7.275c-5.114,0-9.26-4.146-9.26-9.26v-4.917 c0-5.114,4.146-9.26,9.26-9.26h7.275c5.114,0,9.26,4.146,9.26,9.26v4.917C46.646,40.805,42.501,44.951,37.387,44.951z")
+                                          .build();
 
         this.bigPokemon = SVGPathBuilder
-                .create()
-                .scaleX(0)
-                .scaleY(0)
-                .layoutX(40)
-                .layoutY(40)
-                .fill(Color.web("D9E021"))
-                .effect(bigPokemonEffect)
-                .content(
-                        "M64.332,33.584l3.166-3.166C65.99,14.311,53.104,1.493,36.916,0l-3.167,3.167L30.582,0 C14.394,1.493,1.507,14.312,0,30.419l3.166,3.166L0,36.751c1.508,16.106,14.395,28.925,30.582,30.418l3.167-3.167l3.168,3.168 c16.188-1.493,29.073-14.313,30.58-30.421L64.332,33.584z M37.387,44.951h-7.275c-5.114,0-9.26-4.146-9.26-9.26v-4.917 c0-5.114,4.146-9.26,9.26-9.26h7.275c5.114,0,9.26,4.146,9.26,9.26v4.917C46.646,40.805,42.501,44.951,37.387,44.951z")
-                .build();
+                                        .create()
+                                        .scaleX(0)
+                                        .scaleY(0)
+                                        .layoutX(40)
+                                        .layoutY(40)
+                                        .fill(Color.web("D9E021"))
+                                        .effect(bigPokemonEffect)
+                                        .content(
+                                                 "M64.332,33.584l3.166-3.166C65.99,14.311,53.104,1.493,36.916,0l-3.167,3.167L30.582,0 C14.394,1.493,1.507,14.312,0,30.419l3.166,3.166L0,36.751c1.508,16.106,14.395,28.925,30.582,30.418l3.167-3.167l3.168,3.168 c16.188-1.493,29.073-14.313,30.58-30.421L64.332,33.584z M37.387,44.951h-7.275c-5.114,0-9.26-4.146-9.26-9.26v-4.917 c0-5.114,4.146-9.26,9.26-9.26h7.275c5.114,0,9.26,4.146,9.26,9.26v4.917C46.646,40.805,42.501,44.951,37.387,44.951z")
+                                        .build();
 
         this.pageLabel = LabelBuilder.create()
-                .layoutX(970)
-                .layoutY(18.0)
-                .text(String.valueOf(getModel().getSlide().getPage()))
-                .font(PrezFonts.PAGE.get())
-                .textFill(Color.WHITE)
-                .rotate(90.0)
-                .build();
+                                     .layoutX(970)
+                                     .layoutY(18.0)
+                                     .text(String.valueOf(getModel().getSlide().getPage()))
+                                     .font(PrezFonts.PAGE.get())
+                                     .textFill(Color.WHITE)
+                                     .rotate(90.0)
+                                     .build();
 
         // final FlowPane fp = FlowPaneBuilder.create()
         // .orientation(Orientation.HORIZONTAL)
@@ -569,10 +569,10 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
         // .build();
 
         headerPane.getChildren().addAll(this.topRectangle, this.bottomRectangle,
-                this.bigPokemon, this.smallPokemon,
-                this.primaryTitle, this.placeLogo, this.secondaryTitle,
-                pl, this.pageLabel,
-                this.prezTitle);
+                                        this.bigPokemon, this.smallPokemon,
+                                        this.primaryTitle, this.placeLogo, this.secondaryTitle,
+                                        pl, this.pageLabel,
+                                        this.prezTitle);
 
         // AnchorPane.setLeftAnchor(primaryTitle, 40.0);
         // AnchorPane.setTopAnchor(primaryTitle, 45.0);
@@ -634,22 +634,22 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
      */
     protected Node getFooterPanel() {
         this.pageLabel = LabelBuilder.create()
-                .text(String.valueOf(getModel().getSlide().getPage()))
-                .font(PrezFonts.PAGE.get())
-                .build();
+                                     .text(String.valueOf(getModel().getSlide().getPage()))
+                                     .font(PrezFonts.PAGE.get())
+                                     .build();
 
         final AnchorPane ap = AnchorPaneBuilder.create()
-                .children(this.pageLabel)
-                .build();
+                                               .children(this.pageLabel)
+                                               .build();
         AnchorPane.setRightAnchor(this.pageLabel, 20.0);
 
         final StackPane sp = StackPaneBuilder.create()
-                .styleClass("footer")
-                .prefHeight(35.0)
-                .minHeight(Region.USE_PREF_SIZE)
-                .maxHeight(Region.USE_PREF_SIZE)
-                .children(ap)
-                .build();
+                                             .styleClass("footer")
+                                             .prefHeight(35.0)
+                                             .minHeight(Region.USE_PREF_SIZE)
+                                             .maxHeight(Region.USE_PREF_SIZE)
+                                             .children(ap)
+                                             .build();
 
         StackPane.setAlignment(ap, Pos.CENTER_RIGHT);
 
@@ -695,12 +695,12 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
     protected void addSlideItem(final VBox vbox, final SlideItem item) {
 
         Node node = null;
-        if (item.getLink()) {
+        if (item.isLink()) {
 
             final Hyperlink link = HyperlinkBuilder.create()
-                    .opacity(1.0)
-                    .text(item.getValue())
-                    .build();
+                                                   .opacity(1.0)
+                                                   .text(item.getValue())
+                                                   .build();
 
             link.getStyleClass().add("link" + item.getLevel());
 
@@ -714,12 +714,12 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
             });
             node = link;
 
-        } else if (item.getHtml()) {
+        } else if (item.isHtml()) {
 
             final WebView web = WebViewBuilder.create()
-                    .fontScale(1.4)
-                    // .effect(ReflectionBuilder.create().fraction(0.4).build())
-                    .build();
+                                              .fontScale(1.4)
+                                              // .effect(ReflectionBuilder.create().fraction(0.4).build())
+                                              .build();
             web.getEngine().loadContent(item.getValue());
 
             VBox.setVgrow(web, Priority.NEVER);
@@ -730,18 +730,18 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
 
             final Image image = Resources.create(new RelImage(item.getImage())).get();
             final ImageView imageViewer = ImageViewBuilder.create()
-                    .styleClass(ITEM_CLASS_PREFIX + item.getLevel())
-                    .image(image)
-                    // .effect(ReflectionBuilder.create().fraction(0.9).build())
-                    .build();
+                                                          .styleClass(ITEM_CLASS_PREFIX + item.getLevel())
+                                                          .image(image)
+                                                          // .effect(ReflectionBuilder.create().fraction(0.9).build())
+                                                          .build();
 
             node = imageViewer;
         } else {
 
             final Text text = TextBuilder.create()
-                    .styleClass(ITEM_CLASS_PREFIX + item.getLevel())
-                    .text(item.getValue() == null ? "" : item.getValue())
-                    .build();
+                                         .styleClass(ITEM_CLASS_PREFIX + item.getLevel())
+                                         .text(item.getValue() == null ? "" : item.getValue())
+                                         .build();
 
             node = text;
         }
@@ -807,53 +807,59 @@ public abstract class AbstractBaseView<M extends AbstractBaseModel<?, ?, ?>, N e
         setSlideLocked(true);
         this.subSlideTransition = ParallelTransitionBuilder.create()
 
-                .onFinished(new EventHandler<ActionEvent>() {
+                                                           .onFinished(new EventHandler<ActionEvent>() {
 
-                    @Override
-                    public void handle(final ActionEvent event) {
-                        AbstractBaseView.this.currentSubSlide = nextSlide;
-                        AbstractBaseView.this.setSlideLocked(false);
-                    }
-                })
+                                                               @Override
+                                                               public void handle(final ActionEvent event) {
+                                                                   AbstractBaseView.this.currentSubSlide = nextSlide;
+                                                                   AbstractBaseView.this.setSlideLocked(false);
+                                                               }
+                                                           })
 
-                .children(
-                        SequentialTransitionBuilder.create()
-                                .node(this.currentSubSlide)
-                                .children(
-                                        TranslateTransitionBuilder.create()
-                                                .duration(Duration.millis(400))
-                                                .fromY(0)
-                                                .toY(-700)
-                                                // .fromZ(-10)
-                                                .build(),
-                                        TimelineBuilder.create()
-                                                .keyFrames(
-                                                        new KeyFrame(Duration.millis(0), new KeyValue(this.currentSubSlide.visibleProperty(), true)),
-                                                        new KeyFrame(Duration.millis(1), new KeyValue(this.currentSubSlide.visibleProperty(), false))
-                                                )
-                                                .build()
-                                )
+                                                           .children(
+                                                                     SequentialTransitionBuilder.create()
+                                                                                                .node(this.currentSubSlide)
+                                                                                                .children(
+                                                                                                          TranslateTransitionBuilder.create()
+                                                                                                                                    .duration(Duration.millis(400))
+                                                                                                                                    .fromY(0)
+                                                                                                                                    .toY(-700)
+                                                                                                                                    // .fromZ(-10)
+                                                                                                                                    .build(),
+                                                                                                          TimelineBuilder.create()
+                                                                                                                         .keyFrames(
+                                                                                                                                    new KeyFrame(Duration.millis(0),
+                                                                                                                                                 new KeyValue(this.currentSubSlide.visibleProperty(),
+                                                                                                                                                              true)),
+                                                                                                                                    new KeyFrame(Duration.millis(1),
+                                                                                                                                                 new KeyValue(this.currentSubSlide.visibleProperty(),
+                                                                                                                                                              false))
+                                                                                                                         )
+                                                                                                                         .build()
+                                                                                                )
 
-                                .build(),
-                        SequentialTransitionBuilder.create()
-                                .node(nextSlide)
-                                .children(
-                                        TimelineBuilder.create()
-                                                .keyFrames(
-                                                        new KeyFrame(Duration.millis(0), new KeyValue(nextSlide.visibleProperty(), false)),
-                                                        new KeyFrame(Duration.millis(1), new KeyValue(nextSlide.visibleProperty(), true))
-                                                )
-                                                .build(),
-                                        TranslateTransitionBuilder.create()
-                                                .duration(Duration.millis(400))
-                                                .fromY(700)
-                                                .toY(0)
-                                                // .fromZ(-10)
-                                                .build()
-                                )
-                                .build()
-                )
-                .build();
+                                                                                                .build(),
+                                                                     SequentialTransitionBuilder.create()
+                                                                                                .node(nextSlide)
+                                                                                                .children(
+                                                                                                          TimelineBuilder.create()
+                                                                                                                         .keyFrames(
+                                                                                                                                    new KeyFrame(Duration.millis(0),
+                                                                                                                                                 new KeyValue(nextSlide.visibleProperty(), false)),
+                                                                                                                                    new KeyFrame(Duration.millis(1),
+                                                                                                                                                 new KeyValue(nextSlide.visibleProperty(), true))
+                                                                                                                         )
+                                                                                                                         .build(),
+                                                                                                          TranslateTransitionBuilder.create()
+                                                                                                                                    .duration(Duration.millis(400))
+                                                                                                                                    .fromY(700)
+                                                                                                                                    .toY(0)
+                                                                                                                                    // .fromZ(-10)
+                                                                                                                                    .build()
+                                                                                                )
+                                                                                                .build()
+                                                           )
+                                                           .build();
         this.subSlideTransition.play();
 
     }

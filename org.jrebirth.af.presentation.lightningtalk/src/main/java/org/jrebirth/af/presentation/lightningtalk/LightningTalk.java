@@ -28,9 +28,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import org.jrebirth.af.api.resource.ResourceItem;
+import org.jrebirth.af.api.resource.font.FontItem;
+import org.jrebirth.af.api.ui.Model;
 import org.jrebirth.af.core.application.DefaultApplication;
-import org.jrebirth.af.core.resource.font.FontItem;
-import org.jrebirth.af.core.ui.Model;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtFonts;
 import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
@@ -120,7 +121,7 @@ public final class LightningTalk extends DefaultApplication<StackPane> {
      * {@inheritDoc}
      */
     @Override
-    protected List<FontItem> getFontToPreload() {
+    protected List<? extends ResourceItem<?, ?, ?>> getResourceToPreload() {
 
         return Arrays.asList(new FontItem[] {
                 LtFonts.TYPEWRITER,

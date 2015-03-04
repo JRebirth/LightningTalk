@@ -41,9 +41,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 
-import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.api.exception.CoreException;
+import org.jrebirth.af.api.resource.image.ImageExtension;
 import org.jrebirth.af.core.resource.Resources;
-import org.jrebirth.af.core.resource.image.ImageExtension;
 import org.jrebirth.af.core.resource.image.RelImage;
 import org.jrebirth.af.presentation.lightningtalk.ui.slides.base.AbstractBaseView;
 
