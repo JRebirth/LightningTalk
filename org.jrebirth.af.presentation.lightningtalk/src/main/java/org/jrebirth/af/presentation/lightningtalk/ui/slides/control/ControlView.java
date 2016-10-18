@@ -79,7 +79,7 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
     @Override
     protected Node getContentPanel() {
         getSubTitle().setText("");
-        return buildDefaultContent(getModel().getDefaultContent());
+        return buildDefaultContent(model().getDefaultContent());
     }
 
     /**
@@ -125,17 +125,17 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         });
 
         final VBox coloredObjectsVBox = VBoxBuilder.create()
-                .alignment(Pos.CENTER)
-                .spacing(20)
-                .children(coloredText, coloredButton)
-                .build();
+                                                   .alignment(Pos.CENTER)
+                                                   .spacing(20)
+                                                   .children(coloredText, coloredButton)
+                                                   .build();
 
         final VBox outerVBox = VBoxBuilder.create()
-                .alignment(Pos.CENTER)
-                .spacing(150)
-                .padding(new Insets(0, 0, 120, 0))
-                .children(colorPicker, coloredObjectsVBox)
-                .build();
+                                          .alignment(Pos.CENTER)
+                                          .spacing(150)
+                                          .padding(new Insets(0, 0, 120, 0))
+                                          .children(colorPicker, coloredObjectsVBox)
+                                          .build();
 
         // ignoreClick(colorPicker);
 
@@ -185,28 +185,27 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         }
 
         this.pagination = PaginationBuilder.create()
-                .pageCount(7)
-                .pageFactory(new Callback<Integer, Node>() {
+                                           .pageCount(7)
+                                           .pageFactory(new Callback<Integer, Node>() {
 
-                    @Override
-                    public final Node call(final Integer pageIndex) {
-                        return createPicturePage(pageIndex);
-                    }
-                }
-                ).build();
+                                               @Override
+                                               public final Node call(final Integer pageIndex) {
+                                                   return createPicturePage(pageIndex);
+                                               }
+                                           }).build();
         // Style can be numeric page indicators or bullet indicators
         final Button styleButton = ButtonBuilder.create()
-                .text("Toggle pagination style")
-                .onAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(final ActionEvent me) {
-                        if (!ControlView.this.pagination.getStyleClass().contains(Pagination.STYLE_CLASS_BULLET)) {
-                            ControlView.this.pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
-                        } else {
-                            ControlView.this.pagination.getStyleClass().remove(Pagination.STYLE_CLASS_BULLET);
-                        }
-                    }
-                }).build();
+                                                .text("Toggle pagination style")
+                                                .onAction(new EventHandler<ActionEvent>() {
+                                                    @Override
+                                                    public void handle(final ActionEvent me) {
+                                                        if (!ControlView.this.pagination.getStyleClass().contains(Pagination.STYLE_CLASS_BULLET)) {
+                                                            ControlView.this.pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
+                                                        } else {
+                                                            ControlView.this.pagination.getStyleClass().remove(Pagination.STYLE_CLASS_BULLET);
+                                                        }
+                                                    }
+                                                }).build();
 
         outerBox.getChildren().addAll(this.pagination, styleButton);
 

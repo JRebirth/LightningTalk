@@ -53,14 +53,14 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, Pane, PlaceCo
     protected void initView() {
 
         final ImageView toulouse = ImageViewBuilder.create()
-                .image(LtImages.PLACE_BG.get())
-                // .fitHeight(Double.MAX_VALUE)
-                // .fitWidth(Double.MAX_VALUE)
-                .build();
+                                                   .image(LtImages.PLACE_BG.get())
+                                                   // .fitHeight(Double.MAX_VALUE)
+                                                   // .fitWidth(Double.MAX_VALUE)
+                                                   .build();
 
-        getRootNode().getChildren().add(toulouse);
+        node().getChildren().add(toulouse);
 
-        getRootNode().getStyleClass().add(getModel().getSlide().getStyle());
+        node().getStyleClass().add(model().getSlide().getStyle());
     }
 
     /**

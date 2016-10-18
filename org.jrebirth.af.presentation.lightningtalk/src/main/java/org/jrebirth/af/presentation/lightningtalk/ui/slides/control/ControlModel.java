@@ -42,14 +42,14 @@ public final class ControlModel extends AbstractBaseModel<ControlModel, ControlV
 
         switch (slideStep) {
             case ColorPicker:
-                getView().showColorPicker();
+                view().showColorPicker();
                 break;
             case Pagination:
-                getView().showPagination();
+                view().showPagination();
                 break;
 
             default:
-                getView().showSlideStep(slideStep);
+                view().showSlideStep(slideStep);
         }
     }
 

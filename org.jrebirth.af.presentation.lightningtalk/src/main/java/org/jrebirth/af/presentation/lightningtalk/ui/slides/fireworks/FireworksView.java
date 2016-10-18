@@ -55,7 +55,7 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
     protected void initView() {
         this.pane = new FireworksPane(LtImages.FIREWORKS_ART.get(), LtImages.FIREWORKS_MASK.get());
         StackPane.setAlignment(this.pane, Pos.CENTER);
-        getRootNode().getChildren().add(this.pane);
+        node().getChildren().add(this.pane);
     }
 
     /**
