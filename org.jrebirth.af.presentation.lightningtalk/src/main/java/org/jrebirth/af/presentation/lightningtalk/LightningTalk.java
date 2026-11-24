@@ -33,6 +33,7 @@ import org.jrebirth.af.api.resource.font.FontItem;
 import org.jrebirth.af.api.ui.Model;
 import org.jrebirth.af.core.application.DefaultApplication;
 import org.jrebirth.af.presentation.lightningtalk.resources.LtFonts;
+import org.jrebirth.af.presentation.lightningtalk.resources.LtStyles;
 import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
 /**
@@ -86,7 +87,7 @@ public final class LightningTalk extends DefaultApplication<StackPane> {
     @Override
     protected void customizeScene(final Scene scene) {
 
-        scene.getStylesheets().add("style/template.css");
+        addCSS(scene, LtStyles.TEMPLATE);
 
         // Manage F11 button to switch full screen
         scene.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {

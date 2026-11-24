@@ -18,7 +18,6 @@
 package org.jrebirth.af.presentation.lightningtalk.ui.slides.place;
 
 import javafx.scene.image.ImageView;
-import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.Pane;
 
 import org.jrebirth.af.api.exception.CoreException;
@@ -52,11 +51,10 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, Pane, PlaceCo
     @Override
     protected void initView() {
 
-        final ImageView toulouse = ImageViewBuilder.create()
-                                                   .image(LtImages.PLACE_BG.get())
-                                                   // .fitHeight(Double.MAX_VALUE)
-                                                   // .fitWidth(Double.MAX_VALUE)
-                                                   .build();
+        final ImageView toulouse = new ImageView();
+        toulouse.setImage(LtImages.PLACE_BG.get());
+        // .fitHeight(Double.MAX_VALUE)
+        // .fitWidth(Double.MAX_VALUE)
 
         node().getChildren().add(toulouse);
 

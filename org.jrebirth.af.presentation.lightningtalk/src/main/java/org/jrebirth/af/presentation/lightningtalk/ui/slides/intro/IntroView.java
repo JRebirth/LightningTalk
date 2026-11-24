@@ -24,10 +24,9 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.control.LabelBuilder;
-import javafx.scene.effect.DropShadowBuilder;
-import javafx.scene.effect.GlowBuilder;
-import javafx.scene.effect.InnerShadowBuilder;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Glow;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -68,30 +67,26 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
     @Override
     protected void initView() {
 
-        this.label = LabelBuilder
-                                 .create()
-                                 // .text(model().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
-                                 // .styleClass("label", "introTitle")
-                                 // .font(PrezFonts.TYPEWRITER.get())
-                                 // .textFill(Color.BLACK) // web("7F0055")
-                                 .textFill(Color.WHITE)
-                                 .alignment(Pos.CENTER_LEFT)
-                                 .minWidth(800)
-                                 .minHeight(500)
-                                 .effect(DropShadowBuilder.create()
-                                                          .input(
-                                                                 GlowBuilder.create()
-                                                                            .input(InnerShadowBuilder.create()
-                                                                                                     .offsetX(-1)
-                                                                                                     .offsetY(-1)
-                                                                                                     .color(Color.LIGHTSKYBLUE)
-                                                                                                     .build())
-                                                                            .level(0.5)
-                                                                            .build())
-                                                          .offsetX(2)
-                                                          .offsetY(2)
-                                                          .build())
-                                 .build();
+        this.label = new Label();
+        // .text(model().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
+        // .styleClass("label", "introTitle")
+        // .font(PrezFonts.TYPEWRITER.get())
+        // .textFill(Color.BLACK) // web("7F0055")
+        this.label.setTextFill(Color.WHITE);
+        this.label.setAlignment(Pos.CENTER_LEFT);
+        this.label.setMinWidth(800);
+        this.label.setMinHeight(500);
+        final DropShadow dropShadow = new DropShadow();
+        final Glow glow = new Glow(0.5);
+        final InnerShadow innerShadow = new InnerShadow();
+        innerShadow.setOffsetX(-1);
+        innerShadow.setOffsetY(-1);
+        innerShadow.setColor(Color.LIGHTSKYBLUE);
+        glow.setInput(innerShadow);
+        dropShadow.setInput(glow);
+        dropShadow.setOffsetX(2);
+        dropShadow.setOffsetY(2);
+        this.label.setEffect(dropShadow);
 
         this.label.getStyleClass().add("introTitle");
 

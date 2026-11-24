@@ -24,18 +24,15 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBuilder;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
-import javafx.scene.control.PaginationBuilder;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.layout.VBoxBuilder;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -124,18 +121,16 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
             }
         });
 
-        final VBox coloredObjectsVBox = VBoxBuilder.create()
-                                                   .alignment(Pos.CENTER)
-                                                   .spacing(20)
-                                                   .children(coloredText, coloredButton)
-                                                   .build();
+        final VBox coloredObjectsVBox = new VBox();
+        coloredObjectsVBox.setAlignment(Pos.CENTER);
+        coloredObjectsVBox.setSpacing(20);
+        coloredObjectsVBox.getChildren().addAll(coloredText, coloredButton);
 
-        final VBox outerVBox = VBoxBuilder.create()
-                                          .alignment(Pos.CENTER)
-                                          .spacing(150)
-                                          .padding(new Insets(0, 0, 120, 0))
-                                          .children(colorPicker, coloredObjectsVBox)
-                                          .build();
+        final VBox outerVBox = new VBox();
+        outerVBox.setAlignment(Pos.CENTER);
+        outerVBox.setSpacing(150);
+        outerVBox.setPadding(new Insets(0, 0, 120, 0));
+        outerVBox.getChildren().addAll(colorPicker, coloredObjectsVBox);
 
         // ignoreClick(colorPicker);
 
@@ -181,31 +176,30 @@ public final class ControlView extends AbstractBaseView<ControlModel, AnchorPane
         outerBox.setAlignment(Pos.CENTER);
         // Images for our pages
         for (int i = 0; i < 7; i++) {
-            this.images[i] = Resources.create(new RelImage("pictures", "picture " + (i + 1), ImageExtension.PNG)).get();
+            this.images[i] = Resources.create(new RelImage("pictures", "picture " + (i + 1), ImageExtension.PNG)).module(getClass().getModule()).get();
         }
 
-        this.pagination = PaginationBuilder.create()
-                                           .pageCount(7)
-                                           .pageFactory(new Callback<Integer, Node>() {
+        this.pagination = new Pagination();
+        this.pagination.setPageCount(7);
+        this.pagination.setPageFactory(new Callback<Integer, Node>() {
 
-                                               @Override
-                                               public final Node call(final Integer pageIndex) {
-                                                   return createPicturePage(pageIndex);
-                                               }
-                                           }).build();
+            @Override
+            public final Node call(final Integer pageIndex) {
+                return createPicturePage(pageIndex);
+            }
+        });
         // Style can be numeric page indicators or bullet indicators
-        final Button styleButton = ButtonBuilder.create()
-                                                .text("Toggle pagination style")
-                                                .onAction(new EventHandler<ActionEvent>() {
-                                                    @Override
-                                                    public void handle(final ActionEvent me) {
-                                                        if (!ControlView.this.pagination.getStyleClass().contains(Pagination.STYLE_CLASS_BULLET)) {
-                                                            ControlView.this.pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
-                                                        } else {
-                                                            ControlView.this.pagination.getStyleClass().remove(Pagination.STYLE_CLASS_BULLET);
-                                                        }
-                                                    }
-                                                }).build();
+        final Button styleButton = new Button("Toggle pagination style");
+        styleButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(final ActionEvent me) {
+                if (!ControlView.this.pagination.getStyleClass().contains(Pagination.STYLE_CLASS_BULLET)) {
+                    ControlView.this.pagination.getStyleClass().add(Pagination.STYLE_CLASS_BULLET);
+                } else {
+                    ControlView.this.pagination.getStyleClass().remove(Pagination.STYLE_CLASS_BULLET);
+                }
+            }
+        });
 
         outerBox.getChildren().addAll(this.pagination, styleButton);
 

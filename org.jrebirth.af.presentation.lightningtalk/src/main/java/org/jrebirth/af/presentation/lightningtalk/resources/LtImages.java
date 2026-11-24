@@ -29,15 +29,15 @@ import org.jrebirth.af.core.resource.image.RelImage;
 public interface LtImages {
 
     /** The background image used by place slide. */
-    ImageItem PLACE_BG = create(new RelImage("intro", "ToulouseJug", ImageExtension.JPG));
+    ImageItem PLACE_BG = create(new RelImage("intro", "ToulouseJug", ImageExtension.JPG)).module(LtImages.class.getModule());
 
     /** The place logo displayed into each slide. */
-    ImageItem PLACE_LOGO = create(new RelImage("PlaceLogo", ImageExtension.PNG));
+    ImageItem PLACE_LOGO = create(new RelImage("PlaceLogo", ImageExtension.PNG)).module(LtImages.class.getModule());
 
     /** . */
-    ImageItem FIREWORKS_ART = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.JPG));
+    ImageItem FIREWORKS_ART = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.JPG)).module(LtImages.class.getModule());
 
     /** . */
-    ImageItem FIREWORKS_MASK = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.PNG));
+    ImageItem FIREWORKS_MASK = create(new RelImage("canvas", "MontSaintMichel", ImageExtension.PNG)).module(LtImages.class.getModule());
 
 }
