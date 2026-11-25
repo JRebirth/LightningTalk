@@ -28,7 +28,7 @@ import javafx.scene.paint.Paint;
 public class Particle {
 
     /** The Constant GRAVITY. */
-    private static final double GRAVITY = 0.06;
+    private static final double GRAVITY = 0.018;
     // properties for animation
     // and colouring
     /** The alpha. */
@@ -108,8 +108,8 @@ public class Particle {
         this.shouldExplodeChildren = shouldExplodeChildren;
         this.hasTail = hasTail;
         this.alpha = 1;
-        this.easing = Math.random() * 0.02;
-        this.fade = Math.random() * 0.1;
+        this.easing = Math.random() * 0.006;
+        this.fade = Math.random() * 0.03;
     }
 
     /**
@@ -124,11 +124,9 @@ public class Particle {
             this.velY += GRAVITY;
             this.posY += this.velY;
             this.alpha -= this.fade; // fade out particle
-        } else { // on way up
+        } else { // on way up (slower ease toward burst height)
             final double distance = this.targetY - this.posY;
-            // ease the position
-            this.posY += distance * (0.03 + this.easing);
-            // cap to 1
+            this.posY += distance * (0.01 + this.easing);
             this.alpha = Math.min(distance * distance * 0.00005, 1);
         }
         this.posX += this.velX;
@@ -136,25 +134,37 @@ public class Particle {
     }
 
     /**
-     * Draw.
-     * 
+     * Draw at the particle position.
+     *
      * @param context the context
      */
     public void draw(final GraphicsContext context) {
-        final double x = Math.round(this.posX);
-        final double y = Math.round(this.posY);
-        final double xVel = (x - this.lastPosX) * -5;
-        final double yVel = (y - this.lastPosY) * -5;
-        // set the opacity for all drawing of this particle
-        context.setGlobalAlpha(Math.random() * this.alpha);
-        // draw particle
+        draw(context, this.posX, this.posY, this.lastPosX, this.lastPosY, 1.0);
+    }
+
+    /**
+     * Draw at an explicit position (used for water reflection).
+     *
+     * @param context the context
+     * @param drawX draw x
+     * @param drawY draw y
+     * @param prevX previous x (tail)
+     * @param prevY previous y (tail)
+     * @param alphaScale multiply particle alpha (e.g. 0.4 for reflection)
+     */
+    public void draw(final GraphicsContext context, final double drawX, final double drawY, final double prevX, final double prevY,
+            final double alphaScale) {
+        final double x = Math.round(drawX);
+        final double y = Math.round(drawY);
+        final double xVel = (x - Math.round(prevX)) * -5;
+        final double yVel = (y - Math.round(prevY)) * -5;
+        context.setGlobalAlpha(Math.random() * this.alpha * alphaScale);
         context.setFill(this.color);
         context.fillOval(x - this.size, y - this.size, this.size + this.size, this.size + this.size);
-        // draw the arrow triangle from where we were to where we are now
         if (this.hasTail) {
-            context.setFill(Color.rgb(255, 255, 255, 0.3));
-            context.fillPolygon(new double[] { this.posX + 1.5, this.posX + xVel, this.posX - 1.5 },
-                    new double[] { this.posY, this.posY + yVel, this.posY }, 3);
+            context.setFill(Color.rgb(255, 255, 255, 0.3 * alphaScale));
+            context.fillPolygon(new double[] { drawX + 1.5, drawX + xVel, drawX - 1.5 },
+                    new double[] { drawY, drawY + yVel, drawY }, 3);
         }
     }
 }

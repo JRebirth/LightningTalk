@@ -54,6 +54,14 @@ public final class FireworksView extends AbstractSlideView<FireworksModel, Pane,
     @Override
     protected void initView() {
         this.pane = new FireworksPane(LtImages.FIREWORKS_ART.get(), LtImages.FIREWORKS_MASK.get());
+        // Root Pane does not stretch children by default — pin slide geometry so layoutChildren
+        // does not see width/height = 0 (blank fireworks on modern JPMS layouts).
+        this.pane.setMinSize(1024, 768);
+        this.pane.setPrefSize(1024, 768);
+        this.pane.setMaxSize(1024, 768);
+        node().setMinSize(1024, 768);
+        node().setPrefSize(1024, 768);
+        node().setMaxSize(1024, 768);
         StackPane.setAlignment(this.pane, Pos.CENTER);
         node().getChildren().add(this.pane);
     }
